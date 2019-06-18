@@ -6,22 +6,44 @@ const auth = require('../middleware/auth')
 const router = new express.Router()
 
 router.post('/items',auth,async (req, res) => {
-    //console.log(req)]
      console.log(req);
     const item = new Item({
     ...req.body,
     owner: req.user._id
 })
- console.log("itemsssss");
- console.log(item)
     try {
         await item.save()
         res.status(201).send(item)
     } catch (e) {
-    //  console.log(e)
         res.status(400).send(e)
     }
 })
+
+//route to get filtered details
+//will be decided where to structure later
+router.get('/items', async (req, res) => {
+    if(req.query.location)
+    {
+      match.location = req.query.location
+    }
+    if(req.query.category)
+    {
+      match.category = req.query.category
+    }
+    try {
+      await req.user.populate({
+        path: 'items',
+        match
+      }).executePopulate()
+      res.send(req.user.items)
+    }
+      catch (e) {
+      res.status(500).send()
+  }
+})
+
+
+
 
 router.get('/items', async (req, res) => {
     try {
@@ -98,14 +120,11 @@ const upload = multer({
 
 router.post('/items/me/picture', auth, upload.single('picture'), async (req, res) => {
   try {
-    // const item = new Item()
     const buffer = await sharp(req.file.buffer).resize({ width: 200, height: 200 }).png().toBuffer()
     console.log(buffer)
     let id= req.body._id;
    const item = await Item.findByIdAndUpdate(id, { $set: { picture : buffer } } , { new: true, runValidators: true })
-  //  req.item.picture = buffer
-//  item.picture = buffer
-  //  await item.save()
+
     res.send(item)
   } catch (e) {
     console.log(e);
@@ -116,12 +135,8 @@ router.post('/items/me/picture', auth, upload.single('picture'), async (req, res
 
 router.delete('/items/me/picture', auth, async (req, res) => {
   try {
-    // const item = new Item()
     let id= req.body._id;
    const item = await Item.findByIdAndUpdate(id, { $set: { picture : undefined } } , { new: true, runValidators: true })
-  //  req.item.picture = buffer
-//  item.picture = buffer
-  //  await item.save()
     res.send("Picture deleted")
   } catch (e) {
     console.log(e);
