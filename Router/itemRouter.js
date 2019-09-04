@@ -1,64 +1,81 @@
 const express = require('express')
-const Item = require('../Models/item')
 const multer = require('multer')
 const sharp = require('sharp')
 const auth = require('../middleware/auth')
+const path = require('path');
+let itemServices = require('../services/itemServices');
 const router = new express.Router()
 
-router.post('/items',auth,async (req, res) => {
-     console.log(req);
-    const item = new Item({
-    ...req.body,
-    owner: req.user._id
-})
-    try {
-        await item.save()
-        res.status(201).send(item)
-    } catch (e) {
-        res.status(400).send(e)
-    }
-})
-
-//route to get filtered details
-//will be decided where to structure later
-router.get('/items', async (req, res) => {
-    if(req.query.location)
-    {
-      match.location = req.query.location
-    }
-    if(req.query.category)
-    {
-      match.category = req.query.category
-    }
-    try {
-      await req.user.populate({
-        path: 'items',
-        match
-      }).executePopulate()
-      res.send(req.user.items)
-    }
-      catch (e) {
-      res.status(500).send()
-  }
+router.post('/api/item', async (req, res) => {
+    auth(req).then((user) => {
+        itemServices.saveItem(req, res, user)
+        .then((data) => {
+            res.status(200).send();
+        })
+        .catch((error) => {
+            res.status(500).send(error);
+        })
+    })
+    .catch((error) => {
+        res.status(401).send("Unauthorized access");
+    })
 })
 
+router.get('/image/:imageName', (request, response) => {
+    response.sendFile(path.resolve(`./views/images/${request.params.imageName}`))
+})
 
+router.get('/api/items', async (req, res) => {
+    itemServices.getAllItems()
+    .then((items) => {
+        res.send(items);
+    })
+    .catch((error) => {
+        res.status(500).send(error);
+    })
+})
 
+router.post('/api/claimItem/:itemId', (request, response) => {
 
-router.get('/items', async (req, res) => {
-    try {
-      if(typeof req.query.itemid !== 'undefined' && req.query.itemid !== null)
-      {
-        const items = await Item.findById(req.query.itemid)
-        res.send(items)
-      }
-      else {
-        const items = await Item.find({})
-        res.send(items)
-      }
-    } catch (e) {
-        res.status(500).send()
-    }
+})
+
+router.post('/api/foundTheItem/:itemId', (request, response) => {
+    
+})
+
+router.patch('/api/resolveItem/:itemId', (request, response) => {
+    auth(request, response)
+    .then((user) => {
+        itemServices.getItem(request.params.itemId)
+        .then((item) => {
+            if(item.owner === user._id) {
+                itemServices.markAsResolved(item._id)
+                .then((data) => response.status(200).send())
+                .catch((error) => response.status(500).send(error))
+            }
+            else {
+                response.status(401).send('Unauthorized Access');
+            }
+        })
+        .catch((error) => {
+            response.status(500).send(error);
+        })
+    })
+})
+
+router.get('/api/myItems', async (req, res) => {
+    auth(req).then((user) => {
+        itemServices.getMyItems(user)
+        .then((items) => {
+            res.send(items);
+        })
+        .catch((error) => {
+            res.status(500).send(error);
+        })
+    })
+    .catch((error) => {
+        res.status(401).send("Unauthorized access");
+    })
 })
 
 router.patch('/items', async (req, res) => {
@@ -140,9 +157,10 @@ router.delete('/items/me/picture', auth, async (req, res) => {
     res.send("Picture deleted")
   } catch (e) {
     console.log(e);
-  }}, (error, req, res, next) => {
-    res.status(400).send({ error: error.message })
-}
+  }
+// }, (error, req, res, next) => {
+//     res.status(400).send({ error: error.message })
+// }
 })
 
 router.get('/items/:id/picture', async (req, res) => {

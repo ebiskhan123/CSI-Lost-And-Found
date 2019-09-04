@@ -3,7 +3,12 @@ const validator = require('validator')
 
 
 const ItemSchema = new mongoose.Schema({
-  category: {
+  title: {
+    type: String,
+    required: true,
+    trim: true,
+    },
+category: {
       type: String,
       required: true,
       trim: true,
@@ -18,21 +23,34 @@ const ItemSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  lostorfound:{
+  date:{
+      type: Date
+  },
+  lostOrFound:{
     type: String,
     required: true,
     trim: true,
+  },
+  resolved:{
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  tags: {
+      type: [String]
   },
   owner: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User'
   },
-  picture: {
-      type: Buffer
-  }},{
+  imageUrl: {
+      type: String
+  }
+},
+{
     timestamps :true
-  })
+})
 
   ItemSchema.methods.toJSON = function () {
       const item = this
