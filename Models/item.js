@@ -26,6 +26,9 @@ category: {
   date:{
       type: Date
   },
+  requestLogs: {
+      type: [{}],
+  },
   lostOrFound:{
     type: String,
     required: true,

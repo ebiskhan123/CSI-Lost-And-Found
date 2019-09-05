@@ -1,6 +1,8 @@
 let Item = require('../Models/item')
 let fs = require('fs');
 let multer = require('multer');
+let mailer = require('../lib/mailing/mailer');
+let UserServices = require('./userServices');
 
 module.exports.saveItem = async (request, response, user) => {
     return new Promise((resolve, reject) => {
@@ -20,6 +22,28 @@ module.exports.saveItem = async (request, response, user) => {
                 }
             });
         })
+    })
+}
+
+module.exports.claimItem = (itemId, message, claimer) => {
+    return new Promise((resolve, reect) => {
+        this.getItem(itemId)
+        .then((item) => {
+            UserServices.getUser(item.owner)
+            .then((owner) => {
+                mailer.sendItemClaimRequestMail(owner, claimer, item, message)
+                .then((info) => {
+                    addRequestLog(item, message, claimer)
+                    .then((data) => {
+                        resolve(data)
+                    })
+                    .catch((error) => reject(error))
+                })
+                .catch((error) => reject(error))
+            })
+            .catch((error) => reject(error))
+        })
+        .catch((error) => reject(error))        
     })
 }
 
@@ -75,7 +99,21 @@ module.exports.markAsResolved = (itemId) => {
     })
 }
 
-var storage = multer.diskStorage({
+let addRequestLog = (item, message, claimer) => {
+    item.requestLogs.push({ date: Date.now(), message: message, claimer: claimer.id })
+    return new Promise((resolve, reject) => {
+        item.save((error, data) => {
+            if(error) {
+                reject(error)
+            }
+            else {
+                resolve(data)
+            }
+        })
+    })
+}
+
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'Views/images')
     },                    
@@ -86,5 +124,5 @@ var storage = multer.diskStorage({
 
 const saveImage = multer({ storage: storage });
 
-let saveImageInDisk = saveImage.single('image')
+const saveImageInDisk = saveImage.single('image')
 

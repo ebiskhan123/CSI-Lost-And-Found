@@ -36,7 +36,14 @@ router.get('/api/items', async (req, res) => {
 })
 
 router.post('/api/claimItem/:itemId', (request, response) => {
-
+    auth(request, response)
+    .then((user) => {
+        itemServices.claimItem(request.params.itemId, request.body.message, user)
+        .then((item) => {
+            response.status(200).send();
+        })
+        .catch((error) => response.status(500).send(error))
+    })
 })
 
 router.post('/api/foundTheItem/:itemId', (request, response) => {
