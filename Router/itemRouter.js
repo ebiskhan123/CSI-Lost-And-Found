@@ -47,7 +47,14 @@ router.post('/api/claimItem/:itemId', (request, response) => {
 })
 
 router.post('/api/foundTheItem/:itemId', (request, response) => {
-    
+    auth(request, response)
+    .then((user) => {
+        itemServices.foundItem(request.params.itemId, request.body.message, user)
+        .then((item) => {
+            response.status(200).send();
+        })
+        .catch((error) => response.status(500).send(error))
+    })
 })
 
 router.patch('/api/resolveItem/:itemId', (request, response) => {

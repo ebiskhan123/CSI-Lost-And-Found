@@ -47,6 +47,28 @@ module.exports.claimItem = (itemId, message, claimer) => {
     })
 }
 
+module.exports.foundItem = (itemId, message, claimer) => {
+    return new Promise((resolve, reect) => {
+        this.getItem(itemId)
+        .then((item) => {
+            UserServices.getUser(item.owner)
+            .then((owner) => {
+                mailer.sendItemFoundMail(owner, claimer, item, message)
+                .then((info) => {
+                    addRequestLog(item, message, claimer)
+                    .then((data) => {
+                        resolve(data)
+                    })
+                    .catch((error) => reject(error))
+                })
+                .catch((error) => reject(error))
+            })
+            .catch((error) => reject(error))
+        })
+        .catch((error) => reject(error))        
+    })
+}
+
 module.exports.getAllItems = () => {
     return new Promise((resolve, reject) => {
         Item.find((error, data) => {
