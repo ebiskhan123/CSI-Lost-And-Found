@@ -46,7 +46,7 @@ router.post('/api/claimItem/:itemId', (request, response) => {
     })
 })
 
-router.post('/api/foundTheItem/:itemId', (request, response) => {
+router.post('/api/foundItem/:itemId', (request, response) => {
     auth(request, response)
     .then((user) => {
         itemServices.foundItem(request.params.itemId, request.body.message, user)

@@ -48,7 +48,7 @@ module.exports.claimItem = (itemId, message, claimer) => {
 }
 
 module.exports.foundItem = (itemId, message, claimer) => {
-    return new Promise((resolve, reect) => {
+    return new Promise((resolve, reject) => {
         this.getItem(itemId)
         .then((item) => {
             UserServices.getUser(item.owner)

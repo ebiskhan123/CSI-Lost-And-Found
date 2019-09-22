@@ -351,7 +351,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0IiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLWl0ZW0vZGFzaGJvYXJkLWl0ZW0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZS1ob2xkZXJcclxue1xyXG4gICAgd2lkdGg6MTYuNjclO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEyLjUlO1xyXG4gICAgcGFkZGluZy10b3A6IDIlO1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIlO1xyXG59XHJcblxyXG4udHJ1bmNhdGVkXHJcbntcclxuICAgIG1heC13aWR0aDogMzV2dztcclxuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcclxufSJdfQ== */"
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.resolve-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLnJlc29sdmUtYnRue1xyXG4gICAgbWFyZ2luLXRvcDogMXZ3O1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -362,7 +362,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n    <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n    <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n    <h6>{{item.location}}</h6>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n      <div class=\"custom-col\">\r\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n        <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n        <h6>{{item.location}}</h6>\r\n      </div>\r\n      <div class=\"custom-col\">\r\n        <button (click)=\"resolveItem()\" class=\"btn white-text light-green darken-3 resolve-btn\">Resolve</button>\r\n      </div>\r\n      </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -378,6 +378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardItemComponent", function() { return DashboardItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_item_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/item.model */ "./src/app/models/item.model.ts");
+/* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -389,10 +390,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var DashboardItemComponent = /** @class */ (function () {
-    function DashboardItemComponent() {
+    function DashboardItemComponent(itemServices) {
+        this.itemServices = itemServices;
     }
     DashboardItemComponent.prototype.ngOnInit = function () {
+    };
+    DashboardItemComponent.prototype.resolveItem = function () {
+        this.itemServices.resolveItem(this.item._id)
+            .subscribe(function (result) {
+            if (result.error) {
+                console.log(result.error);
+            }
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('item'),
@@ -404,7 +415,7 @@ var DashboardItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dashboard-item.component.html */ "./src/app/dashboard/dashboard-item/dashboard-item.component.html"),
             styles: [__webpack_require__(/*! ./dashboard-item.component.css */ "./src/app/dashboard/dashboard-item/dashboard-item.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
     ], DashboardItemComponent);
     return DashboardItemComponent;
 }());
@@ -525,7 +536,7 @@ var DashboardComponent = /** @class */ (function () {
 
 var mockItems = [
     {
-        id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: 'Near Statue of Liberty',
         title: 'Yamaha Bike Key', date: 'August 10, 2019',
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -533,7 +544,7 @@ var mockItems = [
         tags: ["bike key", "yamaha", "no keychain"]
     },
     {
-        id: 'agagaaf', location: 'Gandhi Park',
+        _id: 'agagaaf', location: 'Gandhi Park',
         title: 'Ladies Handbag', date: 'August 22, 2019',
         imageUrl: '../../assets/images/handBag.jpg',
         lostOrFound: 'Lost', category: 'Bags',
@@ -541,7 +552,7 @@ var mockItems = [
         tags: ["Aswin", "Ebby", "Rss"]
     },
     {
-        id: 'agagag', location: 'Mars Foundations',
+        _id: 'agagag', location: 'Mars Foundations',
         title: 'Ebby', date: 'August 10, 2019',
         imageUrl: '../../assets/images/Ebby.jpg',
         lostOrFound: 'Lost', category: 'Person',
@@ -549,7 +560,7 @@ var mockItems = [
         tags: ["Kovai guy", "kidnapping", "childabuse"]
     },
     {
-        id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: 'Near Statue of Liberty',
         title: 'Yamaha Bike Key', date: 'August 10, 2019',
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -794,7 +805,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0IiLCJmaWxlIjoic3JjL2FwcC9pdGVtcy9pdGVtL2l0ZW0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZS1ob2xkZXJcclxue1xyXG4gICAgd2lkdGg6MTYuNjclO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEyLjUlO1xyXG4gICAgcGFkZGluZy10b3A6IDIlO1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIlO1xyXG59XHJcblxyXG4udHJ1bmNhdGVkXHJcbntcclxuICAgIG1heC13aWR0aDogMzV2dztcclxuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcclxufSJdfQ== */"
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLmNsYWltLWJ0bntcclxuICAgIG1hcmdpbi10b3A6IDF2dztcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -805,7 +816,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n    <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n    <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n    <h6>{{item.location}}</h6>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n      <h6>{{item.location}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -841,6 +852,14 @@ var ItemComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('item'),
         __metadata("design:type", _models_item_model__WEBPACK_IMPORTED_MODULE_1__["Item"])
     ], ItemComponent.prototype, "item", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('claimButtonClick'),
+        __metadata("design:type", Object)
+    ], ItemComponent.prototype, "claimButtonClick", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('isRequestDisabled'),
+        __metadata("design:type", Boolean)
+    ], ItemComponent.prototype, "isRequestDisabled", void 0);
     ItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-item',
@@ -863,7 +882,7 @@ var ItemComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".modal-container\r\n{\r\n    min-height: 100vh;\r\n    padding-top: 2vw;\r\n    padding-bottom: 2vw;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLG9CQUFvQjtDQUN2QiIsImZpbGUiOiJzcmMvYXBwL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubW9kYWwtY29udGFpbmVyXHJcbntcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gICAgcGFkZGluZy10b3A6IDJ2dztcclxuICAgIHBhZGRpbmctYm90dG9tOiAydnc7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -874,7 +893,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\"></app-item>\r\n</div>"
+module.exports = "<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -903,14 +922,46 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ItemsComponent = /** @class */ (function () {
     function ItemsComponent(itemsService) {
+        var _this = this;
         this.itemsService = itemsService;
+        this.setItemRequestForm = function (item) {
+            _this.itemOnFocus = item;
+            if (_this.itemOnFocus.lostOrFound == 'Lost') {
+                _this.itemRequestAction = _this.sendFoundRequest;
+            }
+            else {
+                _this.itemRequestAction = _this.sendClaimRequest;
+            }
+            _this.showItemRequestModal();
+        };
+        this.sendClaimRequest = function () {
+            return _this.itemsService.sendItemClaimRequest(_this.itemRequestMessage, _this.itemOnFocus._id);
+        };
+        this.sendFoundRequest = function () {
+            return _this.itemsService.sendItemFoundRequest(_this.itemRequestMessage, _this.itemOnFocus._id);
+        };
+        this.showItemRequestModal = function () {
+            document.getElementById('itemClaimModal').style.display = 'block';
+        };
+        this.hideItemRequestModal = function () {
+            document.getElementById('itemClaimModal').style.display = 'none';
+        };
         this.items = mockItems;
+        this.itemOnFocus = mockItems[0];
     }
     ItemsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.itemsService.getItems(this.filters)
             .subscribe(function (items) {
             _this.items = items;
+        });
+    };
+    ItemsComponent.prototype.sendItemRequest = function () {
+        this.itemRequestAction()
+            .subscribe(function (result) {
+            if (result.error) {
+                console.log(result.error);
+            }
         });
     };
     ItemsComponent = __decorate([
@@ -926,7 +977,7 @@ var ItemsComponent = /** @class */ (function () {
 
 var mockItems = [
     {
-        id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: 'Near Statue of Liberty',
         title: 'Yamaha Bike Key', date: 'August 10, 2019',
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -934,7 +985,7 @@ var mockItems = [
         tags: ["bike key", "yamaha", "no keychain"]
     },
     {
-        id: 'agagaaf', location: 'Gandhi Park',
+        _id: 'agagaaf', location: 'Gandhi Park',
         title: 'Ladies Handbag', date: 'August 22, 2019',
         imageUrl: '../../assets/images/handBag.jpg',
         lostOrFound: 'Lost', category: 'Bags',
@@ -942,7 +993,7 @@ var mockItems = [
         tags: ["Aswin", "Ebby", "Rss"]
     },
     {
-        id: 'agagag', location: 'Mars Foundations',
+        _id: 'agagag', location: 'Mars Foundations',
         title: 'Ebby', date: 'August 10, 2019',
         imageUrl: '../../assets/images/Ebby.jpg',
         lostOrFound: 'Lost', category: 'Person',
@@ -950,7 +1001,7 @@ var mockItems = [
         tags: ["Kovai guy", "kidnapping", "childabuse"]
     },
     {
-        id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: 'Near Statue of Liberty',
         title: 'Yamaha Bike Key', date: 'August 10, 2019',
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -976,12 +1027,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _items_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./items.component */ "./src/app/items/items.component.ts");
 /* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./item/item.component */ "./src/app/items/item/item.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -993,7 +1046,8 @@ var ItemsModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [_items_component__WEBPACK_IMPORTED_MODULE_2__["ItemsComponent"], _item_item_component__WEBPACK_IMPORTED_MODULE_3__["ItemComponent"]],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
             ],
             exports: [_items_component__WEBPACK_IMPORTED_MODULE_2__["ItemsComponent"], _item_item_component__WEBPACK_IMPORTED_MODULE_3__["ItemComponent"]]
         })
@@ -1054,7 +1108,7 @@ module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n<ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n    <li><a routerLink=\"/items\">Lost</a></li>\r\n    <li><a routerLink=\"/items\">Found</a></li>\r\n</ul>\r\n</div>\r\n<nav class=\"light-green darken-3\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSEI</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\"><a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n      </a></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav light-green lighten-5\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"light-green darken-3\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSEI</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items\">Lost</a></li>\r\n              <li><a routerLink=\"/items\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav light-green lighten-5\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1120,7 +1174,7 @@ var NavbarComponent = /** @class */ (function () {
         this.repositionDropDown = function () {
             var dropDrown = document.getElementById('navDropDown');
             var itemTab = document.getElementById('itemTab');
-            dropDrown.style.left = itemTab.getBoundingClientRect().left + 'px';
+            dropDrown.style.left = (2 * itemTab.getBoundingClientRect().left - itemTab.getBoundingClientRect().right) + 'px';
             dropDrown.style.top = itemTab.getBoundingClientRect().bottom + 'px';
         };
     }
@@ -1201,6 +1255,25 @@ var ItemsService = /** @class */ (function () {
     ItemsService.prototype.getMyItems = function () {
         var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + 'myItems';
         return this.http.get(url);
+    };
+    ItemsService.prototype.resolveItem = function (itemId) {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "resolveItem/" + itemId;
+        return this.http.patch(url, {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mapTo"])({ resolved: true, error: null }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])({ resolved: false, error: error });
+        }));
+    };
+    ItemsService.prototype.sendItemClaimRequest = function (message, itemId) {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "claimItem/" + itemId;
+        return this.sendItemRequest(url, message);
+    };
+    ItemsService.prototype.sendItemFoundRequest = function (message, itemId) {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "foundItem/" + itemId;
+        return this.sendItemRequest(url, message);
+    };
+    ItemsService.prototype.sendItemRequest = function (url, message) {
+        return this.http.post(url, { message: message }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mapTo"])({ saved: true }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])({ saved: false, error: error });
+        }));
     };
     ItemsService.prototype.addItem = function (item) {
         var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + 'item';

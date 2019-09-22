@@ -25,7 +25,7 @@ router.post('/api/signIn', async (req, res) => {
     }
 })
 
-router.post('/api/logOut', auth, async (req, res) => {
+router.post('/api/logOut', async (req, res) => {
     res.status(200).send();
 })
 
