@@ -362,7 +362,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n      <div class=\"custom-col\">\r\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n        <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n        <h6>{{item.location}}</h6>\r\n      </div>\r\n      <div class=\"custom-col\">\r\n        <button (click)=\"resolveItem()\" class=\"btn white-text light-green darken-3 resolve-btn\">Resolve</button>\r\n      </div>\r\n      </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n      <div class=\"custom-col\">\r\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n        <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n        <h6>{{item.location}}</h6>\r\n      </div>\r\n      <div class=\"custom-col\">\r\n        <button (click)=\"resolveItem()\" class=\"btn white-text light-green darken-3 resolve-btn\">Resolve</button>\r\n      </div>\r\n      </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -394,8 +394,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var DashboardItemComponent = /** @class */ (function () {
     function DashboardItemComponent(itemServices) {
         this.itemServices = itemServices;
+        this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     }
     DashboardItemComponent.prototype.ngOnInit = function () {
+        this.item.date = new Date(this.item.date);
     };
     DashboardItemComponent.prototype.resolveItem = function () {
         this.itemServices.resolveItem(this.item._id)
@@ -534,40 +536,7 @@ var DashboardComponent = /** @class */ (function () {
     return DashboardComponent;
 }());
 
-var mockItems = [
-    {
-        _id: 'agagag', location: 'Near Statue of Liberty',
-        title: 'Yamaha Bike Key', date: 'August 10, 2019',
-        imageUrl: '../../assets/images/keys.jpg',
-        lostOrFound: 'Found', category: 'Keys',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        tags: ["bike key", "yamaha", "no keychain"]
-    },
-    {
-        _id: 'agagaaf', location: 'Gandhi Park',
-        title: 'Ladies Handbag', date: 'August 22, 2019',
-        imageUrl: '../../assets/images/handBag.jpg',
-        lostOrFound: 'Lost', category: 'Bags',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        tags: ["Aswin", "Ebby", "Rss"]
-    },
-    {
-        _id: 'agagag', location: 'Mars Foundations',
-        title: 'Ebby', date: 'August 10, 2019',
-        imageUrl: '../../assets/images/Ebby.jpg',
-        lostOrFound: 'Lost', category: 'Person',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        tags: ["Kovai guy", "kidnapping", "childabuse"]
-    },
-    {
-        _id: 'agagag', location: 'Near Statue of Liberty',
-        title: 'Yamaha Bike Key', date: 'August 10, 2019',
-        imageUrl: '../../assets/images/keys.jpg',
-        lostOrFound: 'Found', category: 'Keys',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        tags: ["bike key", "yamaha", "no keychain", "empty", "just joking"]
-    }
-];
+var mockItems = [];
 
 
 /***/ }),
@@ -816,7 +785,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{item.date}}</span></h5>\r\n      <h6>{{item.location}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n      <h6>{{item.location}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -845,8 +814,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ItemComponent = /** @class */ (function () {
     function ItemComponent() {
+        this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     }
     ItemComponent.prototype.ngOnInit = function () {
+        this.item.date = new Date(this.item.date);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('item'),
@@ -946,7 +917,6 @@ var ItemsComponent = /** @class */ (function () {
         this.hideItemRequestModal = function () {
             document.getElementById('itemClaimModal').style.display = 'none';
         };
-        this.items = mockItems;
         this.itemOnFocus = mockItems[0];
     }
     ItemsComponent.prototype.ngOnInit = function () {
@@ -978,7 +948,7 @@ var ItemsComponent = /** @class */ (function () {
 var mockItems = [
     {
         _id: 'agagag', location: 'Near Statue of Liberty',
-        title: 'Yamaha Bike Key', date: 'August 10, 2019',
+        title: 'Yamaha Bike Key', date: new Date(),
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -986,7 +956,7 @@ var mockItems = [
     },
     {
         _id: 'agagaaf', location: 'Gandhi Park',
-        title: 'Ladies Handbag', date: 'August 22, 2019',
+        title: 'Ladies Handbag', date: new Date(),
         imageUrl: '../../assets/images/handBag.jpg',
         lostOrFound: 'Lost', category: 'Bags',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -994,7 +964,7 @@ var mockItems = [
     },
     {
         _id: 'agagag', location: 'Mars Foundations',
-        title: 'Ebby', date: 'August 10, 2019',
+        title: 'Ebby', date: new Date(),
         imageUrl: '../../assets/images/Ebby.jpg',
         lostOrFound: 'Lost', category: 'Person',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -1002,7 +972,7 @@ var mockItems = [
     },
     {
         _id: 'agagag', location: 'Near Statue of Liberty',
-        title: 'Yamaha Bike Key', date: 'August 10, 2019',
+        title: 'Yamaha Bike Key', date: new Date(),
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

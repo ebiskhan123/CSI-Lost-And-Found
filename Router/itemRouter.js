@@ -22,7 +22,7 @@ router.post('/api/item', async (req, res) => {
 })
 
 router.get('/image/:imageName', (request, response) => {
-    response.sendFile(path.resolve(`./views/images/${request.params.imageName}`))
+    response.sendFile(path.resolve(`./Views/images/${request.params.imageName}`))
 })
 
 router.get('/api/items', async (req, res) => {
