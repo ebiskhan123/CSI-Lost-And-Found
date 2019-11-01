@@ -2,6 +2,7 @@ const express = require('express')
 const User = require('../Models/user')
 const router = new express.Router()
 const auth = require('../middleware/auth')
+const userServices = require('../services/userServices')
 
 router.post('/api/signUp', async (req, res) => {
     const user = new User(req.body)
@@ -41,6 +42,20 @@ router.post('/users/logoutAll', auth, async (req, res) => {
 
 router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
+})
+
+router.get('/api/admin/isLoggedIn', (request, response) => {
+    userServices.isAdminLoggedIn(request)
+    .then((result) => response.send(result))
+    .catch((error) => {
+        console.log(error)
+        response.status(500).send(error)
+    })
+})
+
+router.post('/api/admin/logIn', (request, response) => {
+    if(request.body.password == "csie2019")
+    response.cookie('adm', 'NFn09wnq0bHNF14bH4BFb05bFB2Bsgsb', {maxAge: 3600000, httpOnly: true}).send()
 })
 
 

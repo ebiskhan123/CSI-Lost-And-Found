@@ -14,9 +14,9 @@ category: {
       trim: true,
   },
   location: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      trim: true,
+      ref: 'Area'
   },
   description: {
     type: String,

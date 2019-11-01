@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".display-image\r\n{\r\n    width:80%;\r\n}\r\n\r\n.close-chip\r\n{\r\n    cursor: pointer;\r\n    float: right;\r\n    font-size: 16px;\r\n    line-height: 32px;\r\n    padding-left: 8px;\r\n    font-weight: 700;\r\n    color: #000;\r\n    text-shadow: 0 1px 0 #fff;\r\n    opacity: .5;\r\n}\r\n\r\n.close-chip:not(:disabled):not(.disabled):hover {\r\n    opacity: .75;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkLWl0ZW0vYWRkLWl0ZW0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxVQUFVO0NBQ2I7O0FBRUQ7O0lBRUksZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsWUFBWTtJQUNaLDBCQUEwQjtJQUMxQixZQUFZO0NBQ2Y7O0FBRUQ7SUFDSSxhQUFhO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvYWRkLWl0ZW0vYWRkLWl0ZW0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kaXNwbGF5LWltYWdlXHJcbntcclxuICAgIHdpZHRoOjgwJTtcclxufVxyXG5cclxuLmNsb3NlLWNoaXBcclxue1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDMycHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDhweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICBjb2xvcjogIzAwMDtcclxuICAgIHRleHQtc2hhZG93OiAwIDFweCAwICNmZmY7XHJcbiAgICBvcGFjaXR5OiAuNTtcclxufVxyXG5cclxuLmNsb3NlLWNoaXA6bm90KDpkaXNhYmxlZCk6bm90KC5kaXNhYmxlZCk6aG92ZXIge1xyXG4gICAgb3BhY2l0eTogLjc1O1xyXG59Il19 */"
+module.exports = ".display-image\r\n{\r\n    width:80%;\r\n}\r\n\r\n.close-chip\r\n{\r\n    cursor: pointer;\r\n    float: right;\r\n    font-size: 16px;\r\n    line-height: 32px;\r\n    padding-left: 8px;\r\n    font-weight: 700;\r\n    color: #000;\r\n    text-shadow: 0 1px 0 #fff;\r\n    opacity: .5;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.close-chip:not(:disabled):not(.disabled):hover {\r\n    opacity: .75;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkLWl0ZW0vYWRkLWl0ZW0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxVQUFVO0NBQ2I7O0FBRUQ7O0lBRUksZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsWUFBWTtJQUNaLDBCQUEwQjtJQUMxQixZQUFZO0NBQ2Y7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUdEO0lBQ0ksYUFBYTtDQUNoQjs7QUFFRDtJQUNJOztRQUVJLDRCQUE0QjtLQUMvQjtDQUNKIiwiZmlsZSI6InNyYy9hcHAvYWRkLWl0ZW0vYWRkLWl0ZW0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kaXNwbGF5LWltYWdlXHJcbntcclxuICAgIHdpZHRoOjgwJTtcclxufVxyXG5cclxuLmNsb3NlLWNoaXBcclxue1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDMycHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDhweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICBjb2xvcjogIzAwMDtcclxuICAgIHRleHQtc2hhZG93OiAwIDFweCAwICNmZmY7XHJcbiAgICBvcGFjaXR5OiAuNTtcclxufVxyXG5cclxuLmN1c3RvbS1ncmlkXHJcbntcclxuICAgIHdpZHRoOjEwMCU7XHJcbiAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAzNXZ3IGF1dG87XHJcbn1cclxuXHJcbi5jdXN0b20tY29sXHJcbntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG59XHJcblxyXG5cclxuLmNsb3NlLWNoaXA6bm90KDpkaXNhYmxlZCk6bm90KC5kaXNhYmxlZCk6aG92ZXIge1xyXG4gICAgb3BhY2l0eTogLjc1O1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgICAuY3VzdG9tLWdyaWRcclxuICAgIHtcclxuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG87XHJcbiAgICB9XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ".display-image\r\n{\r\n    width:80%;\r\n}\r\n\r\n.close-chip\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l5\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">bookmark</i>\r\n        <input type=\"text\" [(ngModel)]=\"item.title\" id=\"titleInput\" name=\"title\">\r\n        <label for=\"titleInput\">Title</label>\r\n        <span class=\"helper-text\">For example, Blue hand bag</span>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">assignment</i>\r\n        <textarea class=\"materialize-textarea\" [(ngModel)]=\"item.description\" id=\"descriptionInput\" name=\"description\"></textarea>\r\n        <label for=\"descriptionInput\">Description</label>\r\n        <span class=\"helper-text\">Describe the item here, include specifics such as color, reference number, etc. Avoid sensitive informations</span>\r\n      </div>\r\n      <div class=\"row\">\r\n      <div class=\"input-field col s6\">\r\n        <i class=\"material-icons prefix\">date_range</i>\r\n        <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\r\n        <label for=\"dateInput\">Date</label>\r\n        <span class=\"helper-text\">Lost or Found Date</span>\r\n      </div>\r\n      <div class=\"input-field transparent col s4 offset-s1\">\r\n        <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Lost or Found</option>\r\n            <option value=\"Lost\" class=\"red-text\">Lost</option>\r\n            <option value=\"Found\" class=\"green-text\">Found</option>\r\n          </select>\r\n      </div>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">room</i>\r\n        <input type=\"text\" id=\"placeInput\" [(ngModel)]=\"item.location\" name=\"location\">\r\n        <label for=\"placeInput\">Place</label>\r\n        <span class=\"helper-text\">For example, \"Near Statue of Liberty, NY\"</span>\r\n      </div>\r\n    </div>\r\n    <div class=\"col s12 l6\">\r\n      <div class=\"row\">\r\n        <div class=\"col s3\">\r\n          <img src=\"{{imagePath}}\" alt=\"\" class=\"responsive-img display-image z-depth-1\">\r\n        </div>\r\n        <div class=\"input-field col s5 valign-wrapper\">\r\n          <input type=\"file\" id=\"imageInput\" (change)=\"setImage($event)\" name=\"image\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\r\n              <option value=\"\" disabled selected>Category</option>\r\n              <option value=\"Keys\" class=\"\">Keys</option>\r\n              <option value=\"Wallets\" class=\"\">Wallets</option>\r\n              <option value=\"Documents\" class=\"\">Documents</option>\r\n              <option value=\"Bags\" class=\"\">Bags</option>\r\n              <option value=\"Others\" class=\"\">Others</option>\r\n            </select>\r\n        </div>\r\n        <div class=\"input-field col s6 offset-s1\" (keydown)=\"keyDown($event)\">\r\n          <i class=\"material-icons prefix\">loyalty</i>\r\n          <input type=\"text\" [(ngModel)]=\"tag\" id=\"tagsInput\" name=\"tags\">\r\n          <label for=\"tagsInput\">Tags</label>\r\n          <span class=\"helper-text\">Press Enter to add tag</span>        \r\n        </div>\r\n      </div>\r\n      <div class=\"center\">\r\n        <div *ngFor=\"let tag of item.tags; index as i\" class=\"chip\">{{tag}}<i class=\"close-chip material-icons\" (click)=\"removeTag(i)\">close</i></div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"center\">\r\n      <div class=\"btn\" (click)=\"cancel()\">Cancel</div>\r\n      <div class=\"btn light-green darken-3\" (click)=\"saveItem()\">Save</div>\r\n    </div>\r\n  </div>\r\n  \r\n"
+module.exports = "<div class=\"section container\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l5\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">bookmark</i>\r\n        <input type=\"text\" [(ngModel)]=\"item.title\" id=\"titleInput\" name=\"title\">\r\n        <label for=\"titleInput\">Title</label>\r\n        <span class=\"helper-text\">For example, Blue hand bag</span>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">assignment</i>\r\n        <textarea class=\"materialize-textarea\" [(ngModel)]=\"item.description\" id=\"descriptionInput\" name=\"description\"></textarea>\r\n        <label for=\"descriptionInput\">Description</label>\r\n        <span class=\"helper-text\">Describe the item here, include specifics such as color, reference number, etc. Avoid sensitive informations</span>\r\n      </div>\r\n      <div class=\"row\">\r\n      <div class=\"input-field col s6\">\r\n        <i class=\"material-icons prefix\">date_range</i>\r\n        <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\r\n        <label for=\"dateInput\">Date</label>\r\n        <span class=\"helper-text\">Lost or Found Date</span>\r\n      </div>\r\n      <div class=\"input-field transparent col s4 offset-s1\">\r\n        <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Lost or Found</option>\r\n            <option value=\"Lost\" class=\"red-text\">Lost</option>\r\n            <option value=\"Found\" class=\"green-text\">Found</option>\r\n          </select>\r\n      </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"city\" (change)=\"resetAreas()\" [(ngModel)]=\"cityId\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>City</option>\r\n            <option *ngFor=\"let city of cities\" value=\"{{city._id}}\" class=\"\">{{city.name}}</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"input-field transparent col s4 offset-s1\">\r\n          <select name = \"location\"  [(ngModel)]=\"item.location._id\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Area</option>\r\n            <option *ngFor=\"let area of areas\" value=\"{{area._id}}\" class=\"\">{{area.name}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col s12 l6\">\r\n      <div class=\"row\">\r\n        <div class=\"col s12 l3\">\r\n          <img src=\"{{imagePath}}\" alt=\"\" class=\"responsive-img display-image z-depth-1\">\r\n        </div>\r\n        <div class=\"input-field col s12 l5 valign-wrapper\">\r\n          <input type=\"file\" id=\"imageInput\" (change)=\"setImage($event)\" name=\"image\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\r\n              <option value=\"\" disabled selected>Category</option>\r\n              <option value=\"Keys\" class=\"\">Keys</option>\r\n              <option value=\"Wallets\" class=\"\">Wallets</option>\r\n              <option value=\"Documents\" class=\"\">Documents</option>\r\n              <option value=\"Bags\" class=\"\">Bags</option>\r\n              <option value=\"Others\" class=\"\">Others</option>\r\n            </select>\r\n        </div>\r\n        <div class=\"input-field col s6 offset-s1\" (keydown)=\"keyDown($event)\">\r\n          <i class=\"material-icons prefix\">loyalty</i>\r\n          <input type=\"text\" [(ngModel)]=\"tag\" id=\"tagsInput\" name=\"tags\">\r\n          <label for=\"tagsInput\">Tags</label>\r\n          <span class=\"helper-text\">Press Enter to add tag</span>        \r\n        </div>\r\n      </div>\r\n      <div class=\"center\">\r\n        <div *ngFor=\"let tag of item.tags; index as i\" class=\"chip\">{{tag}}<i class=\"close-chip material-icons\" (click)=\"removeTag(i)\">close</i></div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"center\">\r\n      <div class=\"btn\" (click)=\"cancel()\">Cancel</div>\r\n      <div class=\"btn light-green darken-3 white-text\" (click)=\"saveItem()\">Save</div>\r\n    </div>\r\n  </div>\r\n  \r\n"
 
 /***/ }),
 
@@ -75,9 +75,13 @@ var AddItemComponent = /** @class */ (function () {
         var _this = this;
         this.itemsService = itemsService;
         this.router = router;
-        this.item = { lostOrFound: "", category: "", tags: [] };
+        this.item = { lostOrFound: "Lost", category: "", tags: [], location: { _id: '' } };
         this.tag = '';
         this.imagePath = '../../assets/images/noImage.jpg';
+        this.cityId = '';
+        this.areaId = '';
+        this.cities = [];
+        this.areas = [];
         this.saveItem = function () {
             console.log({ image: _this.itemImage, item: _this.item });
             var formData = new FormData();
@@ -123,8 +127,19 @@ var AddItemComponent = /** @class */ (function () {
                 _this.addTag();
             }
         };
+        this.resetAreas = function () {
+            _this.itemsService.getAreas(_this.cityId)
+                .subscribe(function (areas) {
+                _this.areas = areas;
+            });
+        };
     }
     AddItemComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.itemsService.getCities()
+            .subscribe(function (cities) {
+            _this.cities = cities;
+        });
     };
     AddItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -183,9 +198,9 @@ var routes = [
     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
     { path: 'signIn', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
     { path: 'signUp', component: _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
-    { path: 'lostItems', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
-    { path: 'foundItems', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
     { path: 'items', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
+    { path: 'items/:lostOrFound', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
+    { path: 'item/:itemId', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
     { path: 'addItem', component: _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
     { path: 'dashboard', component: _dashboard_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
 ];
@@ -684,11 +699,15 @@ var UserGuard = /** @class */ (function () {
         this.userService = userService;
         this.router = router;
     }
-    UserGuard.prototype.canActivate = function () {
+    UserGuard.prototype.canActivate = function (route) {
         if (this.userService.isLoggedIn()) {
             return true;
         }
-        this.router.navigateByUrl('/signIn');
+        var forwardTo = '';
+        route.url.forEach(function (element) {
+            forwardTo += element.path + "/";
+        });
+        this.router.navigateByUrl("/signIn?forwardTo=" + forwardTo);
         return false;
     };
     UserGuard = __decorate([
@@ -722,7 +741,7 @@ module.exports = ".section\r\n{\r\n  padding-top: 6vw;\r\n  padding-bottom: 4vw;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l6 hide-on-med-and-down valign-wrapper\">\r\n    <img src=\"../../assets/images/itemBox.jpg\" alt=\"\" class=\"responsive-img\">  \r\n  </div>  \r\n  <div class = \"col s12 l3 offset-l2\">\r\n    <div class=\"card\">\r\n        <div class=\"card-image\">\r\n            <img class=\"responsive-img\" src =\"../../assets/images/lostItem.jpg\"/>\r\n        </div>\r\n        <div class=\"card-content\">\r\n            <span class=\"card-title\">Lost Something?</span>\r\n            <button routerLink=\"/addItem\" class=\"btn red\">Describe your Item</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <div class = \"col s12 l3\">\r\n    <div class=\"card\">\r\n        <div class=\"card-image\">\r\n            <img class=\"responsive-img\" src =\"../../assets/images/foundItem.jpg\"/>\r\n        </div>\r\n        <div class=\"card-content\">\r\n            <span class=\"card-title\">Found Something?</span>\r\n            <button class=\"btn green\" routerLink=\"/addItem\">Post an Item</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>"
+module.exports = "\r\n<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l6 hide-on-med-and-down valign-wrapper\">\r\n    <img src=\"../../assets/images/itemBox.jpg\" alt=\"\" class=\"responsive-img\">  \r\n  </div>  \r\n  <div class = \"col s12 l3 offset-l2\">\r\n    <div class=\"card\">\r\n        <div class=\"card-image\">\r\n            <img class=\"responsive-img\" src =\"../../assets/images/lostItem.jpg\"/>\r\n        </div>\r\n        <div class=\"card-content\">\r\n            <span class=\"card-title\">Lost Something?</span>\r\n            <button routerLink=\"/addItem\" class=\"btn red grey-text text-lighten-3\">Describe your Item</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <div class = \"col s12 l3\">\r\n    <div class=\"card\">\r\n        <div class=\"card-image\">\r\n            <img class=\"responsive-img\" src =\"../../assets/images/foundItem.jpg\"/>\r\n        </div>\r\n        <div class=\"card-content\">\r\n            <span class=\"card-title\">Found Something?</span>\r\n            <button class=\"btn green grey-text text-lighten-3\" routerLink=\"/addItem\">Post an Item</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -767,6 +786,69 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/items/filter/filter.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/items/filter/filter.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2l0ZW1zL2ZpbHRlci9maWx0ZXIuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/items/filter/filter.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/items/filter/filter.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"input-field transparent col s3\">\n      <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" disabled selected>Lost or Found</option>\n          <option value=\"Lost\" class=\"red-text\">Lost</option>\n          <option value=\"Found\" class=\"green-text\">Found</option>\n        </select>\n    </div>\n    <div class=\"input-field col s3 offset-s1\">\n      <i class=\"material-icons prefix\">date_range</i>\n      <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\n      <label for=\"dateInput\">Date</label>\n    </div>\n    <div class=\"input-field transparent col s3 offset-s1\">\n      <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" disabled selected>Category</option>\n          <option value=\"Keys\" class=\"\">Keys</option>\n          <option value=\"Wallets\" class=\"\">Wallets</option>\n          <option value=\"Documents\" class=\"\">Documents</option>\n          <option value=\"Bags\" class=\"\">Bags</option>\n          <option value=\"Others\" class=\"\">Others</option>\n        </select>\n    </div>\n    \n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/items/filter/filter.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/items/filter/filter.component.ts ***!
+  \**************************************************/
+/*! exports provided: FilterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterComponent", function() { return FilterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FilterComponent = /** @class */ (function () {
+    function FilterComponent() {
+    }
+    FilterComponent.prototype.ngOnInit = function () {
+    };
+    FilterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'items-filter',
+            template: __webpack_require__(/*! ./filter.component.html */ "./src/app/items/filter/filter.component.html"),
+            styles: [__webpack_require__(/*! ./filter.component.css */ "./src/app/items/filter/filter.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FilterComponent);
+    return FilterComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/items/item/item.component.css":
 /*!***********************************************!*\
   !*** ./src/app/items/item/item.component.css ***!
@@ -774,7 +856,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLmNsYWltLWJ0bntcclxuICAgIG1hcmdpbi10b3A6IDF2dztcclxufVxyXG4iXX0= */"
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 20% auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .image-holder\r\n    {\r\n        width: 70%;\r\n    }\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n    .category-tag\r\n    {\r\n        width:90%;\r\n        margin-bottom: 1vw;\r\n    }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxnQ0FBZ0M7Q0FDbkM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0k7O1FBRUksV0FBVztLQUNkO0lBQ0Q7O1FBRUksNEJBQTRCO0tBQy9CO0lBQ0Q7O1FBRUksVUFBVTtRQUNWLG1CQUFtQjtLQUN0QjtHQUNGIiwiZmlsZSI6InNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAlIGF1dG87XHJcbn1cclxuXHJcbi5jdXN0b20tY29sXHJcbntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG59XHJcblxyXG4uY2xhaW0tYnRue1xyXG4gICAgbWFyZ2luLXRvcDogMXZ3O1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgICAuaW1hZ2UtaG9sZGVyXHJcbiAgICB7XHJcbiAgICAgICAgd2lkdGg6IDcwJTtcclxuICAgIH1cclxuICAgIC5jdXN0b20tZ3JpZFxyXG4gICAge1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0bztcclxuICAgIH1cclxuICAgIC5jYXRlZ29yeS10YWdcclxuICAgIHtcclxuICAgICAgICB3aWR0aDo5MCU7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMXZ3O1xyXG4gICAgfVxyXG4gIH1cclxuIl19 */"
 
 /***/ }),
 
@@ -785,7 +867,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n      <h6>{{item.location}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0 category-tag\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n      <h6>{{item.location.name}}, {{item.location.city.name}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -864,7 +946,7 @@ module.exports = ".modal-container\r\n{\r\n    min-height: 100vh;\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<items-filter></items-filter>\r\n<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -880,6 +962,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemsComponent", function() { return ItemsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/items.service */ "./src/app/services/items.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_guards_user_guard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/guards/user.guard */ "./src/app/guards/user.guard.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -891,11 +975,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var ItemsComponent = /** @class */ (function () {
-    function ItemsComponent(itemsService) {
+    function ItemsComponent(itemsService, routes, userGuard) {
         var _this = this;
         this.itemsService = itemsService;
+        this.routes = routes;
+        this.userGuard = userGuard;
+        this.filters = {};
         this.setItemRequestForm = function (item) {
+            if (_this.userGuard.canActivate(_this.routes.snapshot)) { }
             _this.itemOnFocus = item;
             if (_this.itemOnFocus.lostOrFound == 'Lost') {
                 _this.itemRequestAction = _this.sendFoundRequest;
@@ -919,19 +1009,35 @@ var ItemsComponent = /** @class */ (function () {
         };
         this.itemOnFocus = mockItems[0];
     }
-    ItemsComponent.prototype.ngOnInit = function () {
+    ItemsComponent.prototype.setItems = function () {
         var _this = this;
         this.itemsService.getItems(this.filters)
             .subscribe(function (items) {
             _this.items = items;
         });
     };
+    ItemsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routes.params.subscribe(function (params) {
+            _this.items = mockItems;
+            _this.filters.lostOrFound = params['lostOrFound'];
+            _this.setItems();
+            if (params.itemId) {
+                _this.itemsService.getItem(params.itemId)
+                    .subscribe(function (item) {
+                    _this.setItemRequestForm(item);
+                });
+            }
+        });
+    };
     ItemsComponent.prototype.sendItemRequest = function () {
+        var _this = this;
         this.itemRequestAction()
             .subscribe(function (result) {
             if (result.error) {
                 console.log(result.error);
             }
+            _this.hideItemRequestModal();
         });
     };
     ItemsComponent = __decorate([
@@ -940,14 +1046,14 @@ var ItemsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./items.component.html */ "./src/app/items/items.component.html"),
             styles: [__webpack_require__(/*! ./items.component.css */ "./src/app/items/items.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"]])
+        __metadata("design:paramtypes", [_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], src_app_guards_user_guard__WEBPACK_IMPORTED_MODULE_3__["UserGuard"]])
     ], ItemsComponent);
     return ItemsComponent;
 }());
 
 var mockItems = [
     {
-        _id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: { name: 'Velechery', city: { name: 'Chennai' } },
         title: 'Yamaha Bike Key', date: new Date(),
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -955,7 +1061,7 @@ var mockItems = [
         tags: ["bike key", "yamaha", "no keychain"]
     },
     {
-        _id: 'agagaaf', location: 'Gandhi Park',
+        _id: 'agagaaf', location: { name: 'Polikarai', city: { name: 'Chennai' } },
         title: 'Ladies Handbag', date: new Date(),
         imageUrl: '../../assets/images/handBag.jpg',
         lostOrFound: 'Lost', category: 'Bags',
@@ -963,7 +1069,7 @@ var mockItems = [
         tags: ["Aswin", "Ebby", "Rss"]
     },
     {
-        _id: 'agagag', location: 'Mars Foundations',
+        _id: 'agagag', location: { name: 'Vetturnimadam', city: { name: 'Chennai' } },
         title: 'Ebby', date: new Date(),
         imageUrl: '../../assets/images/Ebby.jpg',
         lostOrFound: 'Lost', category: 'Person',
@@ -971,7 +1077,7 @@ var mockItems = [
         tags: ["Kovai guy", "kidnapping", "childabuse"]
     },
     {
-        _id: 'agagag', location: 'Near Statue of Liberty',
+        _id: 'agagag', location: { name: 'Kottar', city: { name: 'Chennai' } },
         title: 'Yamaha Bike Key', date: new Date(),
         imageUrl: '../../assets/images/keys.jpg',
         lostOrFound: 'Found', category: 'Keys',
@@ -998,6 +1104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _items_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./items.component */ "./src/app/items/items.component.ts");
 /* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./item/item.component */ "./src/app/items/item/item.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _filter_filter_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./filter/filter.component */ "./src/app/items/filter/filter.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1009,12 +1116,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var ItemsModule = /** @class */ (function () {
     function ItemsModule() {
     }
     ItemsModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_items_component__WEBPACK_IMPORTED_MODULE_2__["ItemsComponent"], _item_item_component__WEBPACK_IMPORTED_MODULE_3__["ItemComponent"]],
+            declarations: [_items_component__WEBPACK_IMPORTED_MODULE_2__["ItemsComponent"], _item_item_component__WEBPACK_IMPORTED_MODULE_3__["ItemComponent"], _filter_filter_component__WEBPACK_IMPORTED_MODULE_5__["FilterComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
@@ -1033,16 +1141,30 @@ var ItemsModule = /** @class */ (function () {
 /*!**************************************!*\
   !*** ./src/app/models/item.model.ts ***!
   \**************************************/
-/*! exports provided: Item */
+/*! exports provided: Item, City, Area */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Item", function() { return Item; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "City", function() { return City; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Area", function() { return Area; });
 var Item = /** @class */ (function () {
     function Item() {
     }
     return Item;
+}());
+
+var City = /** @class */ (function () {
+    function City() {
+    }
+    return City;
+}());
+
+var Area = /** @class */ (function () {
+    function Area() {
+    }
+    return Area;
 }());
 
 var LostOrFound;
@@ -1078,7 +1200,7 @@ module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"light-green darken-3\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSEI</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items\">Lost</a></li>\r\n              <li><a routerLink=\"/items\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav light-green lighten-5\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"light-green darken-3\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSIE</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items/lost\">Lost</a></li>\r\n              <li><a routerLink=\"/items/found\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1214,6 +1336,10 @@ var ItemsService = /** @class */ (function () {
     function ItemsService(http) {
         this.http = http;
     }
+    ItemsService.prototype.getItem = function (itemId) {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "item/" + itemId;
+        return this.http.get(url);
+    };
     ItemsService.prototype.getItems = function (searchParams) {
         var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + 'items';
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]();
@@ -1231,6 +1357,14 @@ var ItemsService = /** @class */ (function () {
         return this.http.patch(url, {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mapTo"])({ resolved: true, error: null }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])({ resolved: false, error: error });
         }));
+    };
+    ItemsService.prototype.getCities = function () {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "cities";
+        return this.http.get(url);
+    };
+    ItemsService.prototype.getAreas = function (cityId) {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "areas/" + cityId;
+        return this.http.get(url);
     };
     ItemsService.prototype.sendItemClaimRequest = function (message, itemId) {
         var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "claimItem/" + itemId;
@@ -1369,7 +1503,7 @@ module.exports = ".section\r\n{\r\n    padding-top: 6vw; \r\n}\r\n/*# sourceMapp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n    <div class=\"input-field\">\r\n      <i class=\"material-icons prefix\">email</i>\r\n      <input type=\"email\" [(ngModel)]=\"credentials.email\" id=\"emailInput\" name=\"email\">\r\n      <label for=\"emailInput\">Email</label>\r\n    </div>\r\n    <div class=\"input-field\" (keydown)=\"keyDown($event)\">\r\n      <i class=\"material-icons prefix\">lock</i>\r\n      <input type=\"password\" [(ngModel)]=\"credentials.password\" id=\"passwordInput\" name=\"password\">\r\n      <label for=\"passwordInput\">Password</label>\r\n    </div>\r\n    <div class=\"input-field center\">\r\n      <button class=\"btn light-green darken-3 white-text\" (click)=\"signIn()\">Sign In</button>\r\n    </div>\r\n    <div class=\"\">New User? <a routerLink=\"/signUp\">Create Account</a></div>\r\n  </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n    <div class=\"input-field\">\r\n      <i class=\"material-icons prefix\">email</i>\r\n      <input type=\"email\" [(ngModel)]=\"credentials.email\" id=\"emailInput\" name=\"email\">\r\n      <label for=\"emailInput\">Email</label>\r\n    </div>\r\n    <div class=\"input-field\" (keydown)=\"keyDown($event)\">\r\n      <i class=\"material-icons prefix\">lock</i>\r\n      <input type=\"password\" [(ngModel)]=\"credentials.password\" id=\"passwordInput\" name=\"password\">\r\n      <label for=\"passwordInput\">Password</label>\r\n    </div>\r\n    <div class=\"input-field center\">\r\n      <button class=\"btn light-green darken-3 white-text\" (click)=\"signIn()\">Sign In</button>\r\n    </div>\r\n    <div class=\"\">New User? <a routerLink=\"/signUp\" [queryParams]=\"{forwardTo: '' + forwardTo}\">Create Account</a></div>\r\n  </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1398,16 +1532,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SignInComponent = /** @class */ (function () {
-    function SignInComponent(userService, router) {
+    function SignInComponent(userService, router, activatedRoute) {
         var _this = this;
         this.userService = userService;
         this.router = router;
+        this.activatedRoute = activatedRoute;
         this.credentials = { email: '', password: '' };
         this.signIn = function () {
             _this.userService.signIn(_this.credentials)
                 .subscribe(function (signedIn) {
                 if (signedIn) {
+                    if (_this.forwardTo)
+                        _this.router.navigateByUrl("/" + _this.forwardTo);
                     _this.router.navigateByUrl('/dashboard');
                 }
                 else {
@@ -1422,6 +1560,11 @@ var SignInComponent = /** @class */ (function () {
         };
     }
     SignInComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedRoute.queryParams.subscribe(function (params) {
+            if (params.forwardTo)
+                _this.forwardTo = params.forwardTo;
+        });
     };
     SignInComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1429,7 +1572,7 @@ var SignInComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-in.component.html */ "./src/app/sign-in/sign-in.component.html"),
             styles: [__webpack_require__(/*! ./sign-in.component.css */ "./src/app/sign-in/sign-in.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], SignInComponent);
     return SignInComponent;
 }());
@@ -1485,11 +1628,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SignUpComponent = /** @class */ (function () {
-    function SignUpComponent(userService, router) {
+    function SignUpComponent(userService, router, activatedRoute) {
         var _this = this;
         this.userService = userService;
         this.router = router;
+        this.activatedRoute = activatedRoute;
         this.user = {
             name: '',
             email: '',
@@ -1501,6 +1646,8 @@ var SignUpComponent = /** @class */ (function () {
             _this.userService.signUp(_this.user)
                 .subscribe(function (result) {
                 if (result.created) {
+                    if (_this.forwardTo)
+                        _this.router.navigateByUrl("/" + _this.forwardTo);
                     _this.router.navigateByUrl('/signIn');
                 }
                 else {
@@ -1524,6 +1671,11 @@ var SignUpComponent = /** @class */ (function () {
         };
     }
     SignUpComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedRoute.queryParams.subscribe(function (params) {
+            if (params.forwardTo)
+                _this.forwardTo = params.forwardTo;
+        });
     };
     SignUpComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1531,7 +1683,7 @@ var SignUpComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-up.component.html */ "./src/app/sign-up/sign-up.component.html"),
             styles: [__webpack_require__(/*! ./sign-up.component.css */ "./src/app/sign-up/sign-up.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
     ], SignUpComponent);
     return SignUpComponent;
 }());
