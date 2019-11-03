@@ -1,6 +1,8 @@
 let express = require('express');
 let router = new express.Router();
 let locationServices = require('../services/locationServices')
+let userServices = require('../services/userServices')
+
 
 router.get('/api/cities', (request, response) => {
     locationServices.getCities().then((cities) => {
@@ -9,12 +11,17 @@ router.get('/api/cities', (request, response) => {
     .catch((error) => response.status(500).send(error))
 })
 
-router.post('/api/city', (request, response) => {
-    locationServices.addCity(request.body.name)
-    .then((result) => {
-        response.status(200).send()
-    })
-    .catch((error) => response.status(500).send(error))
+router.post('/api/city', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        locationServices.addCity(request.body.name)
+        .then((result) => {
+            response.status(200).send()
+        })
+        .catch((error) => response.status(500).send(error))
+    }
+    else
+        response.status(401).send('Unauthorized Access')
 })
 
 router.get('/api/areas/:cityId', (request, response) => {
@@ -23,24 +30,39 @@ router.get('/api/areas/:cityId', (request, response) => {
     .catch((error) => response.status(500).send(error))
 })
 
-router.post('/api/area', (request, response) => {
-    locationServices.addArea(request.body)
-    .then((result) => {
-        response.status(200).send()
-    })
-    .catch((error) => response.status(500).send(error))
+router.post('/api/area', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        locationServices.addArea(request.body)
+        .then((result) => {
+            response.status(200).send()
+        })
+        .catch((error) => response.status(500).send(error))
+    }
+    else
+        response.status(401).send('Unauthorized Access')
 })
 
-router.delete('/api/area/:areaId', (request, response) => {
-    locationServices.deleteArea(request.params.areaId)
-    .then((result) => response.status(200).send())
-    .catch((error) => response.status(500).send(error))
+router.delete('/api/area/:areaId', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        locationServices.deleteArea(request.params.areaId)
+        .then((result) => response.status(200).send())
+        .catch((error) => response.status(500).send(error))
+    }
+    else
+        response.status(401).send('Unauthorized Access')
 })
 
-router.delete('/api/city/:cityId', (request, response) => {
-    locationServices.deleteCity(request.params.cityId)
-    .then((result) => response.status(200).send())
-    .catch((error) => response.status(500).send(error))
+router.delete('/api/city/:cityId', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        locationServices.deleteCity(request.params.cityId)
+        .then((result) => response.status(200).send())
+        .catch((error) => response.status(500).send(error))
+    }
+    else
+        response.status(401).send('Unauthorized Access')
 })
 
 
