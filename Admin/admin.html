@@ -54,13 +54,14 @@
             let password = document.getElementById('passwordInput').value
             document.getElementById('passwordInput').value = ''
             xhr.open("POST", './api/admin/logIn', true)
+            xhr.setRequestHeader("content-type", "application/json")
             xhr.onload = () => {
                 initialize()
             }
             xhr.onerror = (error) => {
                 console.log(error)
             }
-            xhr.send({password: password})
+            xhr.send(JSON.stringify({password: password}))
         }
 
         let resetCities = () => {

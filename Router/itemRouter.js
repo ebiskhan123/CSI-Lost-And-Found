@@ -26,7 +26,13 @@ router.get('/image/:imageName', (request, response) => {
 })
 
 router.get('/api/items', async (req, res) => {
-    itemServices.getAllItems()
+    let filters = JSON.parse(req.query.params)
+    for(var filter in filters) {
+        if(!filters[filter])
+            delete filters[filter]
+    }
+    console.log(filters)
+    itemServices.getItems(filters)
     .then((items) => {
         res.send(items);
     })
@@ -42,8 +48,14 @@ router.post('/api/claimItem/:itemId', (request, response) => {
         .then((item) => {
             response.status(200).send();
         })
-        .catch((error) => response.status(500).send(error))
+        .catch((error) => {
+            response.status(500).send(error)
+        })
     })
+})
+
+router.get('/api/item/categories', (request, response) => {
+    response.send(itemServices.getItemCategories());
 })
 
 router.post('/api/foundItem/:itemId', (request, response) => {
@@ -53,7 +65,9 @@ router.post('/api/foundItem/:itemId', (request, response) => {
         .then((item) => {
             response.status(200).send();
         })
-        .catch((error) => response.status(500).send(error))
+        .catch((error) => {
+            response.status(500).send(error)
+        })
     })
 })
 

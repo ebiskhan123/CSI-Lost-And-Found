@@ -41,7 +41,7 @@ module.exports = ".display-image\r\n{\r\n    width:80%;\r\n}\r\n\r\n.close-chip\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l5\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">bookmark</i>\r\n        <input type=\"text\" [(ngModel)]=\"item.title\" id=\"titleInput\" name=\"title\">\r\n        <label for=\"titleInput\">Title</label>\r\n        <span class=\"helper-text\">For example, Blue hand bag</span>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">assignment</i>\r\n        <textarea class=\"materialize-textarea\" [(ngModel)]=\"item.description\" id=\"descriptionInput\" name=\"description\"></textarea>\r\n        <label for=\"descriptionInput\">Description</label>\r\n        <span class=\"helper-text\">Describe the item here, include specifics such as color, reference number, etc. Avoid sensitive informations</span>\r\n      </div>\r\n      <div class=\"row\">\r\n      <div class=\"input-field col s6\">\r\n        <i class=\"material-icons prefix\">date_range</i>\r\n        <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\r\n        <label for=\"dateInput\">Date</label>\r\n        <span class=\"helper-text\">Lost or Found Date</span>\r\n      </div>\r\n      <div class=\"input-field transparent col s4 offset-s1\">\r\n        <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Lost or Found</option>\r\n            <option value=\"Lost\" class=\"red-text\">Lost</option>\r\n            <option value=\"Found\" class=\"green-text\">Found</option>\r\n          </select>\r\n      </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"city\" (change)=\"resetAreas()\" [(ngModel)]=\"cityId\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>City</option>\r\n            <option *ngFor=\"let city of cities\" value=\"{{city._id}}\" class=\"\">{{city.name}}</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"input-field transparent col s4 offset-s1\">\r\n          <select name = \"location\"  [(ngModel)]=\"item.location._id\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Area</option>\r\n            <option *ngFor=\"let area of areas\" value=\"{{area._id}}\" class=\"\">{{area.name}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col s12 l6\">\r\n      <div class=\"row\">\r\n        <div class=\"col s12 l3\">\r\n          <img src=\"{{imagePath}}\" alt=\"\" class=\"responsive-img display-image z-depth-1\">\r\n        </div>\r\n        <div class=\"input-field col s12 l5 valign-wrapper\">\r\n          <input type=\"file\" id=\"imageInput\" (change)=\"setImage($event)\" name=\"image\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\r\n              <option value=\"\" disabled selected>Category</option>\r\n              <option value=\"Keys\" class=\"\">Keys</option>\r\n              <option value=\"Wallets\" class=\"\">Wallets</option>\r\n              <option value=\"Documents\" class=\"\">Documents</option>\r\n              <option value=\"Bags\" class=\"\">Bags</option>\r\n              <option value=\"Others\" class=\"\">Others</option>\r\n            </select>\r\n        </div>\r\n        <div class=\"input-field col s6 offset-s1\" (keydown)=\"keyDown($event)\">\r\n          <i class=\"material-icons prefix\">loyalty</i>\r\n          <input type=\"text\" [(ngModel)]=\"tag\" id=\"tagsInput\" name=\"tags\">\r\n          <label for=\"tagsInput\">Tags</label>\r\n          <span class=\"helper-text\">Press Enter to add tag</span>        \r\n        </div>\r\n      </div>\r\n      <div class=\"center\">\r\n        <div *ngFor=\"let tag of item.tags; index as i\" class=\"chip\">{{tag}}<i class=\"close-chip material-icons\" (click)=\"removeTag(i)\">close</i></div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"center\">\r\n      <div class=\"btn\" (click)=\"cancel()\">Cancel</div>\r\n      <div class=\"btn light-green darken-3 white-text\" (click)=\"saveItem()\">Save</div>\r\n    </div>\r\n  </div>\r\n  \r\n"
+module.exports = "<div class=\"section container\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l5\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">bookmark</i>\r\n        <input type=\"text\" [(ngModel)]=\"item.title\" id=\"titleInput\" name=\"title\">\r\n        <label for=\"titleInput\">Title</label>\r\n        <span class=\"helper-text\">For example, Blue hand bag</span>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">assignment</i>\r\n        <textarea class=\"materialize-textarea\" [(ngModel)]=\"item.description\" id=\"descriptionInput\" name=\"description\"></textarea>\r\n        <label for=\"descriptionInput\">Description</label>\r\n        <span class=\"helper-text\">Describe the item here, include specifics such as color, reference number, etc. Avoid sensitive informations</span>\r\n      </div>\r\n      <div class=\"row\">\r\n      <div class=\"input-field col s6\">\r\n        <i class=\"material-icons prefix\">date_range</i>\r\n        <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\r\n        <label for=\"dateInput\">Date</label>\r\n        <span class=\"helper-text\">Lost or Found Date</span>\r\n      </div>\r\n      <div class=\"input-field transparent col s4 offset-s1\">\r\n        <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Lost or Found</option>\r\n            <option value=\"Lost\" class=\"red-text\">Lost</option>\r\n            <option value=\"Found\" class=\"green-text\">Found</option>\r\n          </select>\r\n      </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"city\" (change)=\"resetAreas()\" [(ngModel)]=\"cityId\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>City</option>\r\n            <option *ngFor=\"let city of cities\" value=\"{{city._id}}\" class=\"\">{{city.name}}</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"input-field transparent col s4 offset-s1\">\r\n          <select name = \"location\"  [(ngModel)]=\"item.location._id\" class=\"browser-default light-green lighten-5\">\r\n            <option value=\"\" disabled selected>Area</option>\r\n            <option *ngFor=\"let area of areas\" value=\"{{area._id}}\" class=\"\">{{area.name}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col s12 l6\">\r\n      <div class=\"row\">\r\n        <div class=\"col s12 l3\">\r\n          <img src=\"{{imagePath}}\" alt=\"\" class=\"responsive-img display-image z-depth-1\">\r\n        </div>\r\n        <div class=\"input-field col s12 l5 valign-wrapper\">\r\n          <input type=\"file\" id=\"imageInput\" (change)=\"setImage($event)\" name=\"image\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"input-field transparent col s4\">\r\n          <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\r\n              <option value=\"\" disabled selected>Category</option>\r\n              <option *ngFor=\"let category of categories\" value=\"{{category}}\" class=\"\">{{category}}</option>\r\n            </select>\r\n        </div>\r\n        <div class=\"input-field col s6 offset-s1\" (keydown)=\"keyDown($event)\">\r\n          <i class=\"material-icons prefix\">loyalty</i>\r\n          <input type=\"text\" [(ngModel)]=\"tag\" id=\"tagsInput\" name=\"tags\">\r\n          <label for=\"tagsInput\">Tags</label>\r\n          <span class=\"helper-text\">Press Enter to add tag</span>        \r\n        </div>\r\n      </div>\r\n      <div class=\"center\">\r\n        <div *ngFor=\"let tag of item.tags; index as i\" class=\"chip\">{{tag}}<i class=\"close-chip material-icons\" (click)=\"removeTag(i)\">close</i></div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"center\">\r\n      <div class=\"btn\" (click)=\"cancel()\">Cancel</div>\r\n      <div class=\"btn light-green darken-3 white-text\" (click)=\"saveItem()\">Save</div>\r\n    </div>\r\n  </div>\r\n  \r\n"
 
 /***/ }),
 
@@ -82,12 +82,11 @@ var AddItemComponent = /** @class */ (function () {
         this.areaId = '';
         this.cities = [];
         this.areas = [];
+        this.categories = [];
         this.saveItem = function () {
-            console.log({ image: _this.itemImage, item: _this.item });
             var formData = new FormData();
             formData.append('item', JSON.stringify(_this.item));
             formData.append('image', _this.itemImage);
-            console.log(formData);
             _this.itemsService.addItem(formData)
                 .subscribe(function (result) {
                 if (result.saved) {
@@ -128,6 +127,7 @@ var AddItemComponent = /** @class */ (function () {
             }
         };
         this.resetAreas = function () {
+            _this.areas = [];
             _this.itemsService.getAreas(_this.cityId)
                 .subscribe(function (areas) {
                 _this.areas = areas;
@@ -137,9 +137,9 @@ var AddItemComponent = /** @class */ (function () {
     AddItemComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.itemsService.getCities()
-            .subscribe(function (cities) {
-            _this.cities = cities;
-        });
+            .subscribe(function (cities) { return _this.cities = cities; });
+        this.itemsService.getCategories()
+            .subscribe(function (categories) { return _this.categories = categories; });
     };
     AddItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -366,7 +366,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.resolve-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLnJlc29sdmUtYnRue1xyXG4gICAgbWFyZ2luLXRvcDogMXZ3O1xyXG59XHJcbiJdfQ== */"
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.resolve-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .image-holder\r\n    {\r\n        width: 70%;\r\n    }\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n    .category-tag\r\n    {\r\n        width:90%;\r\n        margin-bottom: 1vw;\r\n    }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0k7O1FBRUksV0FBVztLQUNkO0lBQ0Q7O1FBRUksNEJBQTRCO0tBQy9CO0lBQ0Q7O1FBRUksVUFBVTtRQUNWLG1CQUFtQjtLQUN0QjtHQUNGIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC1pdGVtL2Rhc2hib2FyZC1pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLnJlc29sdmUtYnRue1xyXG4gICAgbWFyZ2luLXRvcDogMXZ3O1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgICAuaW1hZ2UtaG9sZGVyXHJcbiAgICB7XHJcbiAgICAgICAgd2lkdGg6IDcwJTtcclxuICAgIH1cclxuICAgIC5jdXN0b20tZ3JpZFxyXG4gICAge1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0bztcclxuICAgIH1cclxuICAgIC5jYXRlZ29yeS10YWdcclxuICAgIHtcclxuICAgICAgICB3aWR0aDo5MCU7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMXZ3O1xyXG4gICAgfVxyXG4gIH1cclxuIl19 */"
 
 /***/ }),
 
@@ -377,7 +377,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n      <div class=\"custom-col\">\r\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n        <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n        <h6>{{item.location}}</h6>\r\n      </div>\r\n      <div class=\"custom-col\">\r\n        <button (click)=\"resolveItem()\" class=\"btn white-text light-green darken-3 resolve-btn\">Resolve</button>\r\n      </div>\r\n      </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0 category-tag\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n      <div class=\"custom-col\">\r\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n        <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n        <h6>{{item.location.name}}, {{item.location.city.name}}</h6>\r\n      </div>\r\n      <div class=\"custom-col\">\r\n        <button (click)=\"resolveItem()\" class=\"btn white-text light-green darken-3 resolve-btn\">Resolve</button>\r\n      </div>\r\n      </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
 
 /***/ }),
 
@@ -705,8 +705,12 @@ var UserGuard = /** @class */ (function () {
         }
         var forwardTo = '';
         route.url.forEach(function (element) {
-            forwardTo += element.path + "/";
         });
+        for (var i = 0; i < route.url.length; i++) {
+            if (i > 0)
+                forwardTo += '/';
+            forwardTo += "" + route.url[i].path;
+        }
         this.router.navigateByUrl("/signIn?forwardTo=" + forwardTo);
         return false;
     };
@@ -793,7 +797,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2l0ZW1zL2ZpbHRlci9maWx0ZXIuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".container\r\n{\r\n    padding-top: 1vw;\r\n    padding-bottom: 2vw;\r\n}\r\n\r\n.filter-div \r\n{\r\n    position: fixed;\r\n    top: 64px;\r\n    width: 100%;\r\n    z-index: 5    \r\n}\r\n\r\n.hide\r\n{\r\n    display: none !important\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n   .row\r\n   {\r\n       display: block\r\n   }\r\n   .filter-div\r\n   {\r\n       top: 56px\r\n   }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvZmlsdGVyL2ZpbHRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLGlCQUFpQjtJQUNqQixvQkFBb0I7Q0FDdkI7O0FBRUQ7O0lBRUksZ0JBQWdCO0lBQ2hCLFVBQVU7SUFDVixZQUFZO0lBQ1osVUFBVTtDQUNiOztBQUdEOztJQUVJLHdCQUF3QjtDQUMzQjs7QUFFRDtHQUNHOztPQUVJLGNBQWM7SUFDakI7R0FDRDs7T0FFSSxTQUFTO0lBQ1o7R0FDRCIsImZpbGUiOiJzcmMvYXBwL2l0ZW1zL2ZpbHRlci9maWx0ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJcclxue1xyXG4gICAgcGFkZGluZy10b3A6IDF2dztcclxuICAgIHBhZGRpbmctYm90dG9tOiAydnc7XHJcbn1cclxuXHJcbi5maWx0ZXItZGl2IFxyXG57XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICB0b3A6IDY0cHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHotaW5kZXg6IDUgICAgXHJcbn1cclxuXHJcblxyXG4uaGlkZVxyXG57XHJcbiAgICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnRcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gICAucm93XHJcbiAgIHtcclxuICAgICAgIGRpc3BsYXk6IGJsb2NrXHJcbiAgIH1cclxuICAgLmZpbHRlci1kaXZcclxuICAge1xyXG4gICAgICAgdG9wOiA1NnB4XHJcbiAgIH1cclxuICB9XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -804,7 +808,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"input-field transparent col s3\">\n      <select name = \"lostOrFound\"  [(ngModel)]=\"item.lostOrFound\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" disabled selected>Lost or Found</option>\n          <option value=\"Lost\" class=\"red-text\">Lost</option>\n          <option value=\"Found\" class=\"green-text\">Found</option>\n        </select>\n    </div>\n    <div class=\"input-field col s3 offset-s1\">\n      <i class=\"material-icons prefix\">date_range</i>\n      <input type=\"date\"  [(ngModel)]=\"item.date\" id=\"dateInput\" name=\"date\">\n      <label for=\"dateInput\">Date</label>\n    </div>\n    <div class=\"input-field transparent col s3 offset-s1\">\n      <select name = \"category\"  [(ngModel)]=\"item.category\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" disabled selected>Category</option>\n          <option value=\"Keys\" class=\"\">Keys</option>\n          <option value=\"Wallets\" class=\"\">Wallets</option>\n          <option value=\"Documents\" class=\"\">Documents</option>\n          <option value=\"Bags\" class=\"\">Bags</option>\n          <option value=\"Others\" class=\"\">Others</option>\n        </select>\n    </div>\n    \n  </div>\n</div>\n"
+module.exports = "<div class=\"filter-div\">\n  <div class=\"center container\" id=\"openFilter\">\n      <a class=\"btn-floating waves-effect waves-light light-green darken-3 right\" (click)=\"openFilter()\"><i class=\"material-icons\">youtube_searched_for</i></a>\n  </div>\n  <div class=\"hide\" id=\"filter\">\n  <div class=\"container white\">\n    <h6 class =\"center\">Filters</h6>\n    <div class=\"row\">\n      <div class=\"input-field transparent col l3\">\n        <select name = \"lostOrFound\"  [(ngModel)]=\"filters.lostOrFound\" class=\"browser-default light-green lighten-5\">\n            <option value=\"\" class=\"grey-text\">Lost or Found</option>\n            <option value=\"Lost\" class=\"red-text\">Lost</option>\n            <option value=\"Found\" class=\"green-text\">Found</option>\n          </select>\n      </div>\n      <div class=\"input-field transparent col l3\">\n        <select name = \"category\"  [(ngModel)]=\"filters.category\" class=\"browser-default light-green lighten-5\">\n            <option value=\"\" selected>Category</option>\n            <option *ngFor=\"let category of categories\" value=\"{{category}}\" class=\"\">{{category}}</option>\n          </select>\n      </div>\n      <div class=\"input-field transparent col l4\">\n        <select name = \"city\" (change)=\"resetAreas()\" [(ngModel)]=\"cityId\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" disabled selected>City</option>\n          <option *ngFor=\"let city of cities\" value=\"{{city._id}}\" class=\"\">{{city.name}}</option>\n        </select>\n      </div>\n      <div class=\"input-field transparent col l4\">\n        <select name = \"location\"  [(ngModel)]=\"filters.area\" class=\"browser-default light-green lighten-5\">\n          <option value=\"\" class=\"grey-text\">Area</option>\n          <option *ngFor=\"let area of areas\" value=\"{{area._id}}\" class=\"\">{{area.name}}</option>\n        </select>\n      </div>\n      <div class=\"input-field col l3\">\n        <i class=\"material-icons prefix\">date_range</i>\n        <input type=\"date\"  [(ngModel)]=\"filters.date\" id=\"dateInput\" name=\"date\">\n        <label for=\"dateInput\">Date</label>\n      </div>\n    </div>\n    <div class=\"center\">\n      <div class=\"btn white\" (click)=\"closeFilter()\">Close</div>\n      <div class=\"btn light-green darken-3 white-text\" (click)=\"applyFilter()\">Apply</div>\n    </div>\n  </div>\n  <div class=\"divider light-green darken-3 hide-on-med-and-down\"></div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -819,6 +823,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterComponent", function() { return FilterComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -829,18 +834,59 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FilterComponent = /** @class */ (function () {
-    function FilterComponent() {
+    function FilterComponent(itemsService) {
+        var _this = this;
+        this.itemsService = itemsService;
+        this.cityId = '';
+        this.cities = [];
+        this.areas = [];
+        this.categories = [];
+        this.applyFilter = function () {
+            _this.applyFilters();
+            _this.closeFilter();
+        };
+        this.resetAreas = function () {
+            _this.areas = [];
+            _this.itemsService.getAreas(_this.cityId)
+                .subscribe(function (areas) {
+                _this.areas = areas;
+            });
+        };
+        this.closeFilter = function () {
+            document.getElementById('filter').classList.add('hide');
+            document.getElementById('openFilter').classList.remove('hide');
+        };
+        this.openFilter = function () {
+            document.getElementById('filter').classList.remove('hide');
+            document.getElementById('openFilter').classList.add('hide');
+        };
     }
     FilterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.itemsService.getCities()
+            .subscribe(function (cities) { return _this.cities = cities; });
+        this.itemsService.getCategories()
+            .subscribe(function (categories) { return _this.categories = categories; });
     };
+    FilterComponent.prototype.ngOnDestroy = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('filters'),
+        __metadata("design:type", Object)
+    ], FilterComponent.prototype, "filters", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('applyFilters'),
+        __metadata("design:type", Object)
+    ], FilterComponent.prototype, "applyFilters", void 0);
     FilterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'items-filter',
             template: __webpack_require__(/*! ./filter.component.html */ "./src/app/items/filter/filter.component.html"),
             styles: [__webpack_require__(/*! ./filter.component.css */ "./src/app/items/filter/filter.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"]])
     ], FilterComponent);
     return FilterComponent;
 }());
@@ -856,7 +902,7 @@ var FilterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 20% auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .image-holder\r\n    {\r\n        width: 70%;\r\n    }\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n    .category-tag\r\n    {\r\n        width:90%;\r\n        margin-bottom: 1vw;\r\n    }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxnQ0FBZ0M7Q0FDbkM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0k7O1FBRUksV0FBVztLQUNkO0lBQ0Q7O1FBRUksNEJBQTRCO0tBQy9CO0lBQ0Q7O1FBRUksVUFBVTtRQUNWLG1CQUFtQjtLQUN0QjtHQUNGIiwiZmlsZSI6InNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjAlIGF1dG87XHJcbn1cclxuXHJcbi5jdXN0b20tY29sXHJcbntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG59XHJcblxyXG4uY2xhaW0tYnRue1xyXG4gICAgbWFyZ2luLXRvcDogMXZ3O1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgICAuaW1hZ2UtaG9sZGVyXHJcbiAgICB7XHJcbiAgICAgICAgd2lkdGg6IDcwJTtcclxuICAgIH1cclxuICAgIC5jdXN0b20tZ3JpZFxyXG4gICAge1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0bztcclxuICAgIH1cclxuICAgIC5jYXRlZ29yeS10YWdcclxuICAgIHtcclxuICAgICAgICB3aWR0aDo5MCU7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMXZ3O1xyXG4gICAgfVxyXG4gIH1cclxuIl19 */"
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .image-holder\r\n    {\r\n        width: 70%;\r\n    }\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n    .category-tag\r\n    {\r\n        width:90%;\r\n        margin-bottom: 1vw;\r\n    }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0k7O1FBRUksV0FBVztLQUNkO0lBQ0Q7O1FBRUksNEJBQTRCO0tBQy9CO0lBQ0Q7O1FBRUksVUFBVTtRQUNWLG1CQUFtQjtLQUN0QjtHQUNGIiwiZmlsZSI6InNyYy9hcHAvaXRlbXMvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLmNsYWltLWJ0bntcclxuICAgIG1hcmdpbi10b3A6IDF2dztcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gICAgLmltYWdlLWhvbGRlclxyXG4gICAge1xyXG4gICAgICAgIHdpZHRoOiA3MCU7XHJcbiAgICB9XHJcbiAgICAuY3VzdG9tLWdyaWRcclxuICAgIHtcclxuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG87XHJcbiAgICB9XHJcbiAgICAuY2F0ZWdvcnktdGFnXHJcbiAgICB7XHJcbiAgICAgICAgd2lkdGg6OTAlO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDF2dztcclxuICAgIH1cclxuICB9XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -946,7 +992,7 @@ module.exports = ".modal-container\r\n{\r\n    min-height: 100vh;\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<items-filter></items-filter>\r\n<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<items-filter [filters]=\"filters\" [applyFilters]=\"applyFilters\"></items-filter>\r\n<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -983,7 +1029,7 @@ var ItemsComponent = /** @class */ (function () {
         this.itemsService = itemsService;
         this.routes = routes;
         this.userGuard = userGuard;
-        this.filters = {};
+        this.filters = { lostOrFound: '', category: '', area: '' };
         this.setItemRequestForm = function (item) {
             if (_this.userGuard.canActivate(_this.routes.snapshot)) { }
             _this.itemOnFocus = item;
@@ -994,6 +1040,9 @@ var ItemsComponent = /** @class */ (function () {
                 _this.itemRequestAction = _this.sendClaimRequest;
             }
             _this.showItemRequestModal();
+        };
+        this.applyFilters = function () {
+            _this.setItems();
         };
         this.sendClaimRequest = function () {
             return _this.itemsService.sendItemClaimRequest(_this.itemRequestMessage, _this.itemOnFocus._id);
@@ -1020,7 +1069,8 @@ var ItemsComponent = /** @class */ (function () {
         var _this = this;
         this.routes.params.subscribe(function (params) {
             _this.items = mockItems;
-            _this.filters.lostOrFound = params['lostOrFound'];
+            if (params['lostOrFound'])
+                _this.filters.lostOrFound = params['lostOrFound'];
             _this.setItems();
             if (params.itemId) {
                 _this.itemsService.getItem(params.itemId)
@@ -1189,7 +1239,7 @@ var Categories;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.sidenav\r\n{\r\n    padding-top: 50px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLG1CQUFtQjtDQUN0Qjs7QUFFRDs7SUFFSSxrQkFBa0I7Q0FDckIiLCJmaWxlIjoic3JjL2FwcC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZS1uYXYtcGFkZGVkXHJcbntcclxuICAgIHBhZGRpbmctbGVmdDogNTBweDtcclxufVxyXG5cclxuLnNpZGVuYXZcclxue1xyXG4gICAgcGFkZGluZy10b3A6IDUwcHg7XHJcbn0iXX0= */"
+module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.sidenav\r\n{\r\n    padding-top: 50px;\r\n}\r\n\r\n.nav-z\r\n{\r\n    z-index: 9        \r\n}\r\n\r\n.sticky \r\n{\r\n    position: fixed;\r\n    top: 0;\r\n}\r\n\r\n.nav-offset\r\n{\r\n    width: 100%;\r\n    height: 64px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLG1CQUFtQjtDQUN0Qjs7QUFFRDs7SUFFSSxrQkFBa0I7Q0FDckI7O0FBRUQ7O0lBRUksVUFBVTtDQUNiOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixPQUFPO0NBQ1Y7O0FBRUQ7O0lBRUksWUFBWTtJQUNaLGFBQWE7Q0FDaEIiLCJmaWxlIjoic3JjL2FwcC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZS1uYXYtcGFkZGVkXHJcbntcclxuICAgIHBhZGRpbmctbGVmdDogNTBweDtcclxufVxyXG5cclxuLnNpZGVuYXZcclxue1xyXG4gICAgcGFkZGluZy10b3A6IDUwcHg7XHJcbn1cclxuXHJcbi5uYXYtelxyXG57XHJcbiAgICB6LWluZGV4OiA5ICAgICAgICBcclxufVxyXG5cclxuLnN0aWNreSBcclxue1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgdG9wOiAwO1xyXG59XHJcblxyXG4ubmF2LW9mZnNldFxyXG57XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogNjRweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1200,7 +1250,7 @@ module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"light-green darken-3\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSIE</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items/lost\">Lost</a></li>\r\n              <li><a routerLink=\"/items/found\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<div id=\"navOffset\"></div>\r\n<nav class=\"light-green darken-3 nav-z\" id=\"navBar\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSIE</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items/lost\">Lost</a></li>\r\n              <li><a routerLink=\"/items/found\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1269,8 +1319,24 @@ var NavbarComponent = /** @class */ (function () {
             dropDrown.style.left = (2 * itemTab.getBoundingClientRect().left - itemTab.getBoundingClientRect().right) + 'px';
             dropDrown.style.top = itemTab.getBoundingClientRect().bottom + 'px';
         };
+        this.stickNavbar = function (event) {
+            var navbar = document.getElementById('navBar');
+            var navOffset = document.getElementById('navOffset');
+            if (window.pageYOffset >= navbar.offsetTop) {
+                navbar.classList.add("sticky");
+                navOffset.classList.add("nav-offset");
+            }
+            else {
+                navOffset.classList.remove("nav-offset");
+                navbar.classList.remove("sticky");
+            }
+        };
     }
     NavbarComponent.prototype.ngOnInit = function () {
+        window.addEventListener('scroll', this.stickNavbar, true);
+    };
+    NavbarComponent.prototype.ngOnDestroy = function () {
+        window.removeEventListener('scroll', this.stickNavbar, true);
     };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1345,7 +1411,7 @@ var ItemsService = /** @class */ (function () {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]();
         headers.append('Content-Type', 'application/json');
         var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpParams"]()
-            .set("params", searchParams);
+            .set("params", JSON.stringify(searchParams));
         return this.http.get(url, { headers: headers, params: params });
     };
     ItemsService.prototype.getMyItems = function () {
@@ -1360,6 +1426,10 @@ var ItemsService = /** @class */ (function () {
     };
     ItemsService.prototype.getCities = function () {
         var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "cities";
+        return this.http.get(url);
+    };
+    ItemsService.prototype.getCategories = function () {
+        var url = _app_config__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "item/categories";
         return this.http.get(url);
     };
     ItemsService.prototype.getAreas = function (cityId) {
@@ -1546,7 +1616,8 @@ var SignInComponent = /** @class */ (function () {
                 if (signedIn) {
                     if (_this.forwardTo)
                         _this.router.navigateByUrl("/" + _this.forwardTo);
-                    _this.router.navigateByUrl('/dashboard');
+                    else
+                        _this.router.navigateByUrl('/dashboard');
                 }
                 else {
                     console.log('check credentials');

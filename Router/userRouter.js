@@ -55,7 +55,9 @@ router.get('/api/admin/isLoggedIn', (request, response) => {
 
 router.post('/api/admin/logIn', (request, response) => {
     if(request.body.password == "csie2019")
-    response.cookie('adm', 'NFn09wnq0bHNF14bH4BFb05bFB2Bsgsb', {maxAge: 3600000, httpOnly: true}).send()
+        response.cookie('adm', 'NFn09wnq0bHNF14bH4BFb05bFB2Bsgsb', {maxAge: 3600000, httpOnly: true}).send()
+    else
+        response.send('WrongPassword')
 })
 
 

@@ -1,4 +1,5 @@
-let Item = require('../Models/item')
+let ItemModel = require('../Models/item')
+let Item = ItemModel.Item
 let fs = require('fs');
 let multer = require('multer');
 let mailer = require('../lib/mailing/mailer');
@@ -8,7 +9,9 @@ module.exports.saveItem = async (request, response, user) => {
     return new Promise((resolve, reject) => {
         saveImageInDisk(request, response, () => {
             let itemObject = JSON.parse(request.body.item);
-            itemObject.imageUrl = request.file.filename;
+            itemObject.imageUrl = 'no-image.jpg'
+            if(request.file)
+                itemObject.imageUrl = request.file.filename
             itemObject.owner = user._id;
             let item = new Item({
                 ...itemObject
@@ -25,8 +28,26 @@ module.exports.saveItem = async (request, response, user) => {
     })
 }
 
+module.exports.getItemCategories = () => {
+    return ItemModel.categories;
+}
+
+module.exports.getItems = (filters) => {
+    return new Promise((resolve, reject) => {
+        Item.find({...filters}).populate({path: 'location', populate:{path: 'city'}})
+        .exec((error, data) => {
+            if(error) {
+                reject(error)
+            }
+            else {
+                resolve(data)
+            }
+        })
+    })
+}
+
 module.exports.claimItem = (itemId, message, claimer) => {
-    return new Promise((resolve, reect) => {
+    return new Promise((resolve, reject) => {
         this.getItem(itemId)
         .then((item) => {
             UserServices.getUser(item.owner)
@@ -71,7 +92,8 @@ module.exports.foundItem = (itemId, message, claimer) => {
 
 module.exports.getAllItems = () => {
     return new Promise((resolve, reject) => {
-        Item.find((error, data) => {
+        Item.find().populate({path: 'location', populate:{path: 'city'}})
+        .exec((error, data) => {
             if(error) {
                 reject(error)
             }

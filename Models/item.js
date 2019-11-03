@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
+const categories = ['Bags','Keys','Documents', 'Wallets', 'Others']
 
 const ItemSchema = new mongoose.Schema({
   title: {
@@ -10,6 +11,7 @@ const ItemSchema = new mongoose.Schema({
     },
 category: {
       type: String,
+      enum: categories,
       required: true,
       trim: true,
   },
@@ -63,7 +65,9 @@ category: {
 
 const Item = mongoose.model('Item', ItemSchema)
 
-module.exports = Item
+module.exports.Item = Item
+
+module.exports.categories = categories
 
 
 // const ne = new Item({
