@@ -106,7 +106,8 @@ module.exports.getAllItems = () => {
 
 module.exports.getMyItems = (user) => {
     return new Promise((resolve, reject) => {
-        Item.find({owner: user._id}, (error, data) => {
+        Item.find({owner: user._id}).populate({path: 'location', populate:{path: 'city'}})
+        .exec((error, data) => {
             if(error) {
                 reject(error)
             }

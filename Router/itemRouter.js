@@ -31,7 +31,6 @@ router.get('/api/items', async (req, res) => {
         if(!filters[filter])
             delete filters[filter]
     }
-    console.log(filters)
     itemServices.getItems(filters)
     .then((items) => {
         res.send(items);
