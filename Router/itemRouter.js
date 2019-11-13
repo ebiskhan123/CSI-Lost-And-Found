@@ -90,6 +90,12 @@ router.patch('/api/resolveItem/:itemId', (request, response) => {
     })
 })
 
+router.get('/api/item/:itemId', (request, response) => {
+    itemServices.getItem(request.params.itemId)
+    .then(item => response.send(item))
+    .catch(error => response.status(500).send(error))
+})
+
 router.get('/api/myItems', async (req, res) => {
     auth(req).then((user) => {
         itemServices.getMyItems(user)

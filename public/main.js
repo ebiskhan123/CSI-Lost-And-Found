@@ -23,6 +23,69 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/about-us/about-us.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/about-us/about-us.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".row\r\n{\r\n    padding-top: 2vw\r\n}\r\n@media only screen and (min-width: 600px) {\r\n    .section\r\n    {\r\n        padding-right: 10vw \r\n    }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxnQkFBZ0I7Q0FDbkI7QUFDRDtJQUNJOztRQUVJLG1CQUFtQjtLQUN0QjtDQUNKIiwiZmlsZSI6InNyYy9hcHAvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yb3dcclxue1xyXG4gICAgcGFkZGluZy10b3A6IDJ2d1xyXG59XHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNjAwcHgpIHtcclxuICAgIC5zZWN0aW9uXHJcbiAgICB7XHJcbiAgICAgICAgcGFkZGluZy1yaWdodDogMTB2dyBcclxuICAgIH1cclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/about-us/about-us.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/about-us/about-us.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section container\">\n  <h1 class=\"light-green-text text-darken-3\">About Us</h1>\n  <div class=\"row\">\n    <div class=\"col s12 l8\">\n      <p class=\"flow-text\">\n      Lost and found box is a dedicated spot in public buildings \n      especially hotels or offices where people can go on to recover \n      lost items that may be found by other visitors. \n      </p>\n      <p class=\"flow-text\">\n      This website (lostfoundtn.com) also caters to the similar purpose. \n      Here, people who have lost an item can post about it. \n      In turn, people who have found back the item can post here, \n      which will fasttrack easy retrieval of articles.\n      This is an intiative of Tamil Society of Inventors and Ecofreaks.\n      </p>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/about-us/about-us.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/about-us/about-us.component.ts ***!
+  \************************************************/
+/*! exports provided: AboutUsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutUsComponent = /** @class */ (function () {
+    function AboutUsComponent() {
+    }
+    AboutUsComponent.prototype.ngOnInit = function () {
+    };
+    AboutUsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about-us',
+            template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/about-us/about-us.component.html"),
+            styles: [__webpack_require__(/*! ./about-us.component.css */ "./src/app/about-us/about-us.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutUsComponent);
+    return AboutUsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/add-item/add-item.component.css":
 /*!*************************************************!*\
   !*** ./src/app/add-item/add-item.component.css ***!
@@ -58,6 +121,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/items.service */ "./src/app/services/items.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -70,9 +134,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var AddItemComponent = /** @class */ (function () {
-    function AddItemComponent(itemsService, router) {
+    function AddItemComponent(app, itemsService, router) {
         var _this = this;
+        this.app = app;
         this.itemsService = itemsService;
         this.router = router;
         this.item = { lostOrFound: "Lost", category: "", tags: [], location: { _id: '' } };
@@ -93,6 +159,7 @@ var AddItemComponent = /** @class */ (function () {
                     _this.router.navigateByUrl('/dashboard');
                 }
                 else {
+                    _this.app.makeToast(result.error.message);
                     console.log(result.error);
                 }
             });
@@ -147,7 +214,7 @@ var AddItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add-item.component.html */ "./src/app/add-item/add-item.component.html"),
             styles: [__webpack_require__(/*! ./add-item.component.css */ "./src/app/add-item/add-item.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], _services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], AddItemComponent);
     return AddItemComponent;
 }());
@@ -177,6 +244,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./add-item/add-item.component */ "./src/app/add-item/add-item.component.ts");
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
 /* harmony import */ var _guards_user_guard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./guards/user.guard */ "./src/app/guards/user.guard.ts");
+/* harmony import */ var src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/item/item.component */ "./src/app/item/item.component.ts");
+/* harmony import */ var src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/about-us/about-us.component */ "./src/app/about-us/about-us.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -193,13 +262,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var routes = [
     { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+    { path: 'aboutUs', component: src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__["AboutUsComponent"] },
     { path: 'signIn', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
     { path: 'signUp', component: _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
     { path: 'items', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
     { path: 'items/:lostOrFound', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
+    { path: 'item/:itemId', component: src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__["ItemComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
     { path: 'addItem', component: _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
     { path: 'dashboard', component: _dashboard_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
 ];
@@ -215,7 +288,7 @@ var AppRoutingModule = /** @class */ (function () {
     return AppRoutingModule;
 }());
 
-var routingComponents = [_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"], _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"]];
+var routingComponents = [_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"], src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__["AboutUsComponent"], _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"], src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__["ItemComponent"]];
 
 
 /***/ }),
@@ -227,7 +300,7 @@ var routingComponents = [_home_home_component__WEBPACK_IMPORTED_MODULE_2__["Home
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "#toastDiv {\r\n    display: none; /* Hidden by default. Visible on click */\r\n    min-width: 250px; /* Set a default minimum width */\r\n    margin-left: -125px; /* Divide value of min-width by 2 */\r\n    background-color: #333; /* Black background color */\r\n    color: #fff; /* White text color */\r\n    text-align: center; /* Centered text */\r\n    border-radius: 2px; /* Rounded borders */\r\n    padding: 16px; /* Padding */\r\n    position: fixed; /* Sit on top of the screen */\r\n    z-index: 999; /* Add a z-index if needed */\r\n    left: 50%; /* Center the snackbar */\r\n    bottom: 30px; /* 30px from the bottom */\r\n  }\r\n  \r\n  .show-toast {\r\n    display: block !important;\r\n    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\r\n    animation: fadein 0.5s, fadeout 0.5s 2.5s;\r\n  }\r\n  \r\n  @-webkit-keyframes fadein {\r\n    from {bottom: 0; opacity: 0;} \r\n    to {bottom: 30px; opacity: 1;}\r\n  }\r\n  \r\n  @keyframes fadein {\r\n    from {bottom: 0; opacity: 0;}\r\n    to {bottom: 30px; opacity: 1;}\r\n  }\r\n  \r\n  @-webkit-keyframes fadeout {\r\n    from {bottom: 30px; opacity: 1;} \r\n    to {bottom: 0; opacity: 0;}\r\n  }\r\n  \r\n  @keyframes fadeout {\r\n    from {bottom: 30px; opacity: 1;}\r\n    to {bottom: 0; opacity: 0;}\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxjQUFjLENBQUMseUNBQXlDO0lBQ3hELGlCQUFpQixDQUFDLGlDQUFpQztJQUNuRCxvQkFBb0IsQ0FBQyxvQ0FBb0M7SUFDekQsdUJBQXVCLENBQUMsNEJBQTRCO0lBQ3BELFlBQVksQ0FBQyxzQkFBc0I7SUFDbkMsbUJBQW1CLENBQUMsbUJBQW1CO0lBQ3ZDLG1CQUFtQixDQUFDLHFCQUFxQjtJQUN6QyxjQUFjLENBQUMsYUFBYTtJQUM1QixnQkFBZ0IsQ0FBQyw4QkFBOEI7SUFDL0MsYUFBYSxDQUFDLDZCQUE2QjtJQUMzQyxVQUFVLENBQUMseUJBQXlCO0lBQ3BDLGFBQWEsQ0FBQywwQkFBMEI7R0FDekM7O0VBRUQ7SUFDRSwwQkFBMEI7SUFDMUIsa0RBQWtEO0lBQ2xELDBDQUEwQztHQUMzQzs7RUFFRDtJQUNFLE1BQU0sVUFBVSxDQUFDLFdBQVcsQ0FBQztJQUM3QixJQUFJLGFBQWEsQ0FBQyxXQUFXLENBQUM7R0FDL0I7O0VBRUQ7SUFDRSxNQUFNLFVBQVUsQ0FBQyxXQUFXLENBQUM7SUFDN0IsSUFBSSxhQUFhLENBQUMsV0FBVyxDQUFDO0dBQy9COztFQUVEO0lBQ0UsTUFBTSxhQUFhLENBQUMsV0FBVyxDQUFDO0lBQ2hDLElBQUksVUFBVSxDQUFDLFdBQVcsQ0FBQztHQUM1Qjs7RUFFRDtJQUNFLE1BQU0sYUFBYSxDQUFDLFdBQVcsQ0FBQztJQUNoQyxJQUFJLFVBQVUsQ0FBQyxXQUFXLENBQUM7R0FDNUIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiN0b2FzdERpdiB7XHJcbiAgICBkaXNwbGF5OiBub25lOyAvKiBIaWRkZW4gYnkgZGVmYXVsdC4gVmlzaWJsZSBvbiBjbGljayAqL1xyXG4gICAgbWluLXdpZHRoOiAyNTBweDsgLyogU2V0IGEgZGVmYXVsdCBtaW5pbXVtIHdpZHRoICovXHJcbiAgICBtYXJnaW4tbGVmdDogLTEyNXB4OyAvKiBEaXZpZGUgdmFsdWUgb2YgbWluLXdpZHRoIGJ5IDIgKi9cclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzMzM7IC8qIEJsYWNrIGJhY2tncm91bmQgY29sb3IgKi9cclxuICAgIGNvbG9yOiAjZmZmOyAvKiBXaGl0ZSB0ZXh0IGNvbG9yICovXHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IC8qIENlbnRlcmVkIHRleHQgKi9cclxuICAgIGJvcmRlci1yYWRpdXM6IDJweDsgLyogUm91bmRlZCBib3JkZXJzICovXHJcbiAgICBwYWRkaW5nOiAxNnB4OyAvKiBQYWRkaW5nICovXHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7IC8qIFNpdCBvbiB0b3Agb2YgdGhlIHNjcmVlbiAqL1xyXG4gICAgei1pbmRleDogOTk5OyAvKiBBZGQgYSB6LWluZGV4IGlmIG5lZWRlZCAqL1xyXG4gICAgbGVmdDogNTAlOyAvKiBDZW50ZXIgdGhlIHNuYWNrYmFyICovXHJcbiAgICBib3R0b206IDMwcHg7IC8qIDMwcHggZnJvbSB0aGUgYm90dG9tICovXHJcbiAgfVxyXG4gIFxyXG4gIC5zaG93LXRvYXN0IHtcclxuICAgIGRpc3BsYXk6IGJsb2NrICFpbXBvcnRhbnQ7XHJcbiAgICAtd2Via2l0LWFuaW1hdGlvbjogZmFkZWluIDAuNXMsIGZhZGVvdXQgMC41cyAyLjVzO1xyXG4gICAgYW5pbWF0aW9uOiBmYWRlaW4gMC41cywgZmFkZW91dCAwLjVzIDIuNXM7XHJcbiAgfVxyXG4gIFxyXG4gIEAtd2Via2l0LWtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7Ym90dG9tOiAwOyBvcGFjaXR5OiAwO30gXHJcbiAgICB0byB7Ym90dG9tOiAzMHB4OyBvcGFjaXR5OiAxO31cclxuICB9XHJcbiAgXHJcbiAgQGtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7Ym90dG9tOiAwOyBvcGFjaXR5OiAwO31cclxuICAgIHRvIHtib3R0b206IDMwcHg7IG9wYWNpdHk6IDE7fVxyXG4gIH1cclxuICBcclxuICBALXdlYmtpdC1rZXlmcmFtZXMgZmFkZW91dCB7XHJcbiAgICBmcm9tIHtib3R0b206IDMwcHg7IG9wYWNpdHk6IDE7fSBcclxuICAgIHRvIHtib3R0b206IDA7IG9wYWNpdHk6IDA7fVxyXG4gIH1cclxuICBcclxuICBAa2V5ZnJhbWVzIGZhZGVvdXQge1xyXG4gICAgZnJvbSB7Ym90dG9tOiAzMHB4OyBvcGFjaXR5OiAxO31cclxuICAgIHRvIHtib3R0b206IDA7IG9wYWNpdHk6IDA7fVxyXG4gIH0iXX0= */"
 
 /***/ }),
 
@@ -238,7 +311,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<app-footer></app-footer>\r\n"
+module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<div id=\"toastDiv\"></div>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
@@ -500,7 +573,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n  <app-dashboard-item *ngFor=\"let item of items, index as i\" [item]=\"item\"></app-dashboard-item>\r\n</div>\r\n"
+module.exports = "<div class=\"section container\">\r\n  <h6 *ngIf=\"!items.length\" class=\"center grey-text\">Dashboard is empty. You can report about lost or found items from home page</h6>\r\n  <app-dashboard-item *ngFor=\"let item of items, index as i\" [item]=\"item\"></app-dashboard-item>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -562,7 +635,7 @@ var mockItems = [];
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "@media only screen and (max-width: 1000px) {\r\n    .l-screen\r\n    {\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 1001px) {\r\n    .s-screen\r\n    {\r\n        display: none;\r\n    }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0k7O1FBRUksY0FBYztLQUNqQjtDQUNKOztBQUVEO0lBQ0k7O1FBRUksY0FBYztLQUNqQjtDQUNKIiwiZmlsZSI6InNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcclxuICAgIC5sLXNjcmVlblxyXG4gICAge1xyXG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICB9XHJcbn1cclxuXHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTAwMXB4KSB7XHJcbiAgICAucy1zY3JlZW5cclxuICAgIHtcclxuICAgICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG59Il19 */"
 
 /***/ }),
 
@@ -573,7 +646,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"page-footer light-green darken-3\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col s12 l6\">\r\n          <h4>About Us</h4>\r\n          <p>We are this, we are that blah blah blah.\r\n          We do this, we do that blah blah blah.</p>\r\n        </div>\r\n        <div class=\"col s12 l4 offset-l2\">\r\n          <h4>Connect</h4>\r\n          <ul>\r\n          <li><i class=\"fab fa-facebook-f pr-1\"></i><a href=\"https://www.facebook.com/csie.in/\" target=\"_blank\" class=\"grey-text textlighten-5\">Facebook</a></li>\r\n          <li><a href=\"https://www.instagram.com/csieindia/\" target=\"_blank\" class=\"grey-text textlighten-5\">Instagram</a></li>\r\n          <li><a href=\"https://twitter.com/csifortheworld\" target=\"_blank\" class=\"grey-text textlighten-5\">Twitter</a></li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  <div class=\"footer-copyright light-green darken-4\">\r\n    <div class=\"container center-align\">All rights reserved*</div>\r\n  </div>\r\n  </footer>\r\n"
+module.exports = "<footer class=\"page-footer light-green darken-3\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col s12 l3 offset-s1 offset-l0\">\r\n          <h4>Connect</h4>\r\n          <ul>\r\n          <li><a href=\"https://www.facebook.com/csie.in/\" target=\"_blank\" class=\"grey-text text-lighten-3\">Facebook</a></li>\r\n          <li><a href=\"https://www.instagram.com/csieindia/\" target=\"_blank\" class=\"grey-text text-lighten-3\">Instagram</a></li>\r\n          <li><a href=\"https://twitter.com/csifortheworld\" target=\"_blank\" class=\"grey-text text-lighten-3\">Twitter</a></li>\r\n          </ul>\r\n        </div>\r\n        <div class=\"col s12 l7 valign-wrapper\">\r\n          <img class=\"l-screen\" src=\"../../assets/images/tsie-logo.png\" alt=\"\">\r\n          <img class=\"s-screen\" src=\"../../assets/images/tsie-logo-mobile.png\" alt=\"\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n  <div class=\"footer-copyright light-green darken-4\">\r\n    <div class=\"container center-align\">All rights reserved*</div>\r\n  </div>\r\n  </footer>\r\n"
 
 /***/ }),
 
@@ -731,7 +804,7 @@ var UserGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".section\r\n{\r\n  padding-top: 6vw;\r\n  padding-bottom: 4vw; \r\n}\r\n\r\n.home-buttons{\r\n  margin-top: 50%;\r\n}\r\n\r\n.button-found {\r\ncolor: #20bf6b ;\r\ntext-transform: uppercase;\r\nbackground: #ffffff;\r\npadding: 20px;\r\nborder: 4px solid #20bf6b ;\r\nborder-radius: 6px;\r\ndisplay: inline-block;\r\ntransition: all 0.3s ease 0s;\r\n}\r\n\r\n.button-found:hover {\r\ncolor: #d9d9d9;\r\nborder-radius: 50px;\r\nborder-color: #d9d9d9;\r\ntransition: all 0.3s ease 0s;\r\nbackground: #20bf6b;\r\n}\r\n\r\n.button-lost {\r\ncolor: #e60000 ;\r\ntext-transform: uppercase;\r\nbackground: #ffffff;\r\npadding: 20px;\r\nborder: 4px solid #e60000 ;\r\nborder-radius: 6px;\r\ndisplay: inline-block;\r\ntransition: all 0.3s ease 0s;\r\n}\r\n\r\n.button-lost:hover {\r\ncolor: #494949 ;\r\nborder-radius: 50px;\r\nborder-color: #494949;\r\ntransition: all 0.3s ease 0s;\r\nbackground: #e60000;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsaUJBQWlCO0VBQ2pCLG9CQUFvQjtDQUNyQjs7QUFFRDtFQUNFLGdCQUFnQjtDQUNqQjs7QUFFRDtBQUNBLGdCQUFnQjtBQUNoQiwwQkFBMEI7QUFDMUIsb0JBQW9CO0FBQ3BCLGNBQWM7QUFDZCwyQkFBMkI7QUFDM0IsbUJBQW1CO0FBQ25CLHNCQUFzQjtBQUN0Qiw2QkFBNkI7Q0FDNUI7O0FBRUQ7QUFDQSxlQUFlO0FBQ2Ysb0JBQW9CO0FBQ3BCLHNCQUFzQjtBQUN0Qiw2QkFBNkI7QUFDN0Isb0JBQW9CO0NBQ25COztBQUdEO0FBQ0EsZ0JBQWdCO0FBQ2hCLDBCQUEwQjtBQUMxQixvQkFBb0I7QUFDcEIsY0FBYztBQUNkLDJCQUEyQjtBQUMzQixtQkFBbUI7QUFDbkIsc0JBQXNCO0FBQ3RCLDZCQUE2QjtDQUM1Qjs7QUFFRDtBQUNBLGdCQUFnQjtBQUNoQixvQkFBb0I7QUFDcEIsc0JBQXNCO0FBQ3RCLDZCQUE2QjtBQUM3QixvQkFBb0I7Q0FDbkIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWN0aW9uXHJcbntcclxuICBwYWRkaW5nLXRvcDogNnZ3O1xyXG4gIHBhZGRpbmctYm90dG9tOiA0dnc7IFxyXG59XHJcblxyXG4uaG9tZS1idXR0b25ze1xyXG4gIG1hcmdpbi10b3A6IDUwJTtcclxufVxyXG5cclxuLmJ1dHRvbi1mb3VuZCB7XHJcbmNvbG9yOiAjMjBiZjZiIDtcclxudGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuYmFja2dyb3VuZDogI2ZmZmZmZjtcclxucGFkZGluZzogMjBweDtcclxuYm9yZGVyOiA0cHggc29saWQgIzIwYmY2YiA7XHJcbmJvcmRlci1yYWRpdXM6IDZweDtcclxuZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG50cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlIDBzO1xyXG59XHJcblxyXG4uYnV0dG9uLWZvdW5kOmhvdmVyIHtcclxuY29sb3I6ICNkOWQ5ZDk7XHJcbmJvcmRlci1yYWRpdXM6IDUwcHg7XHJcbmJvcmRlci1jb2xvcjogI2Q5ZDlkOTtcclxudHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwcztcclxuYmFja2dyb3VuZDogIzIwYmY2YjtcclxufVxyXG5cclxuXHJcbi5idXR0b24tbG9zdCB7XHJcbmNvbG9yOiAjZTYwMDAwIDtcclxudGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuYmFja2dyb3VuZDogI2ZmZmZmZjtcclxucGFkZGluZzogMjBweDtcclxuYm9yZGVyOiA0cHggc29saWQgI2U2MDAwMCA7XHJcbmJvcmRlci1yYWRpdXM6IDZweDtcclxuZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG50cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlIDBzO1xyXG59XHJcblxyXG4uYnV0dG9uLWxvc3Q6aG92ZXIge1xyXG5jb2xvcjogIzQ5NDk0OSA7XHJcbmJvcmRlci1yYWRpdXM6IDUwcHg7XHJcbmJvcmRlci1jb2xvcjogIzQ5NDk0OTtcclxudHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwcztcclxuYmFja2dyb3VuZDogI2U2MDAwMDtcclxufVxyXG4iXX0= */"
+module.exports = ".section\r\n{\r\n  padding-top: 6vw;\r\n  padding-bottom: 4vw; \r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n  .row\r\n  {\r\n    display: grid\r\n  }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsaUJBQWlCO0VBQ2pCLG9CQUFvQjtDQUNyQjs7QUFFRDtFQUNFOztJQUVFLGFBQWE7R0FDZDtDQUNGIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VjdGlvblxyXG57XHJcbiAgcGFkZGluZy10b3A6IDZ2dztcclxuICBwYWRkaW5nLWJvdHRvbTogNHZ3OyBcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gIC5yb3dcclxuICB7XHJcbiAgICBkaXNwbGF5OiBncmlkXHJcbiAgfVxyXG59Il19 */"
 
 /***/ }),
 
@@ -781,6 +854,105 @@ var HomeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/item/item.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/item/item.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12.5%;\r\n    padding-top: 2%;\r\n    padding-bottom: 2%;\r\n}\r\n\r\n.truncated\r\n{\r\n    max-width: 35vw;\r\n    padding-bottom: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.custom-grid\r\n{\r\n    width:100%;\r\n    display: grid;\r\n    grid-template-columns: 35vw auto;\r\n}\r\n\r\n.custom-col\r\n{\r\n    display: inline-grid;\r\n}\r\n\r\n.claim-btn{\r\n    margin-top: 1vw;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .image-holder\r\n    {\r\n        width: 70%;\r\n    }\r\n    .custom-grid\r\n    {\r\n        grid-template-columns: auto;\r\n    }\r\n    .category-tag\r\n    {\r\n        width:90%;\r\n        margin-bottom: 1vw;\r\n    }\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCOztBQUVEOztJQUVJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQix3QkFBd0I7Q0FDM0I7O0FBRUQ7O0lBRUksV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7Q0FDcEM7O0FBRUQ7O0lBRUkscUJBQXFCO0NBQ3hCOztBQUVEO0lBQ0ksZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0k7O1FBRUksV0FBVztLQUNkO0lBQ0Q7O1FBRUksNEJBQTRCO0tBQy9CO0lBQ0Q7O1FBRUksVUFBVTtRQUNWLG1CQUFtQjtLQUN0QjtHQUNGIiwiZmlsZSI6InNyYy9hcHAvaXRlbS9pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOjE2LjY3JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMi41JTtcclxuICAgIHBhZGRpbmctdG9wOiAyJTtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyJTtcclxufVxyXG5cclxuLnRydW5jYXRlZFxyXG57XHJcbiAgICBtYXgtd2lkdGg6IDM1dnc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuXHJcbi5jdXN0b20tZ3JpZFxyXG57XHJcbiAgICB3aWR0aDoxMDAlO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzV2dyBhdXRvO1xyXG59XHJcblxyXG4uY3VzdG9tLWNvbFxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxufVxyXG5cclxuLmNsYWltLWJ0bntcclxuICAgIG1hcmdpbi10b3A6IDF2dztcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG4gICAgLmltYWdlLWhvbGRlclxyXG4gICAge1xyXG4gICAgICAgIHdpZHRoOiA3MCU7XHJcbiAgICB9XHJcbiAgICAuY3VzdG9tLWdyaWRcclxuICAgIHtcclxuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG87XHJcbiAgICB9XHJcbiAgICAuY2F0ZWdvcnktdGFnXHJcbiAgICB7XHJcbiAgICAgICAgd2lkdGg6OTAlO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDF2dztcclxuICAgIH1cclxuICB9XHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/item/item.component.html":
+/*!******************************************!*\
+  !*** ./src/app/item/item.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container section\">\n  <h4 class=\"\">Claim Item</h4>\n  <div class=\"row\">\n    <div class=\"image-holder\">\n      <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\n    </div>\n    <div class=\"col s12 l6 offset-l1 valign-wrapper\">\n    <div>\n      <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\n      <div class=\"truncated\">{{item.description}}</div>\n      <a href=\"\" class=\"btn light-green lighten-5 z-depth-0 category-tag\">\n        <i class=\"material-icons left\">class</i>\n        {{item.category}}\n      </a>\n      <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\n      <div class=\"custom-grid\"> \n      <div class=\"custom-col\">\n        <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\n        <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\n        <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\n        <h6>{{item.location.name}}, {{item.location.city.name}}</h6>\n      </div>\n      <div class=\"custom-col\">\n      </div>\n      </div>\n    </div>\n    </div>\n  </div>\n  <div class=\"divider light-green darken-3\"></div>\n  <div class=\"input-field\">\n    <i class=\"material-icons prefix\">assignment</i>\n    <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\n    <label for=\"messageInput\">Message</label>\n    <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\n  </div>\n  <div>\n    <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\n    <button class=\"btn right\" routerLink=\"/items\">Cancel</button>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/item/item.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/item/item.component.ts ***!
+  \****************************************/
+/*! exports provided: ItemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemComponent", function() { return ItemComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ItemComponent = /** @class */ (function () {
+    function ItemComponent(itemsService, routes) {
+        var _this = this;
+        this.itemsService = itemsService;
+        this.routes = routes;
+        this.setItem = function (itemId) {
+            _this.itemsService.getItem(itemId)
+                .subscribe(function (item) {
+                _this.item = item;
+                _this.setItemRequestAction();
+            });
+        };
+        this.setItemRequestAction = function () {
+            if (_this.item.lostOrFound === 'Found')
+                _this.itemRequestAction = _this.sendClaimRequest;
+            else
+                _this.itemRequestAction = _this.sendFoundRequest;
+        };
+        this.sendClaimRequest = function () {
+            return _this.itemsService.sendItemClaimRequest(_this.itemRequestMessage, _this.item._id);
+        };
+        this.sendFoundRequest = function () {
+            return _this.itemsService.sendItemFoundRequest(_this.itemRequestMessage, _this.item._id);
+        };
+    }
+    ItemComponent.prototype.sendItemRequest = function () {
+        this.itemRequestAction()
+            .subscribe(function (result) {
+            if (result.error) {
+                console.log(result.error);
+            }
+        });
+    };
+    ItemComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routes.params.subscribe(function (params) { return _this.setItem(params['itemId']); });
+    };
+    ItemComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-item-view',
+            template: __webpack_require__(/*! ./item.component.html */ "./src/app/item/item.component.html"),
+            styles: [__webpack_require__(/*! ./item.component.css */ "./src/app/item/item.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], ItemComponent);
+    return ItemComponent;
 }());
 
 
@@ -910,7 +1082,7 @@ module.exports = ".image-holder\r\n{\r\n    width:16.67%;\r\n    margin-left: 12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0 category-tag\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n      <h6>{{item.location.name}}, {{item.location.city.name}}</h6>\r\n    </div>\r\n    <div *ngIf=\"!isRequestDisabled\" class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n"
+module.exports = "<div class=\"container\">\r\n<div class=\"row\">\r\n  <div class=\"image-holder\">\r\n    <img src=\"{{'./image/' + item.imageUrl}}\" alt=\"\" class=\"responsive-img materialboxed\">\r\n  </div>\r\n  <div class=\"col s12 l6 offset-l1 valign-wrapper\">\r\n  <div>\r\n    <h3 class=\"light-green-text text-darken-3\">{{item.title}}</h3>\r\n    <div class=\"truncated\">{{item.description}}</div>\r\n    <a href=\"\" class=\"btn light-green lighten-5 z-depth-0 category-tag\">\r\n      <i class=\"material-icons left\">class</i>\r\n      {{item.category}}\r\n    </a>\r\n    <div *ngFor=\"let tag of item.tags\" class=\"chip right\">{{tag}}</div>\r\n    <div class=\"custom-grid\"> \r\n    <div class=\"custom-col\">\r\n      <h5><span class=\"green-text\" *ngIf=\"item.lostOrFound=='Found'\">Found</span>\r\n      <span class=\"red-text\" *ngIf=\"item.lostOrFound=='Lost'\">Lost </span>\r\n      <span class=\"grey-text\">&nbsp;&nbsp;{{months[item.date.getMonth()]}} {{item.date.getDate()}}, {{item.date.getFullYear()}}</span></h5>\r\n      <h6>{{item.location.name}}, {{item.location.city.name}}</h6>\r\n    </div>\r\n    <div class=\"custom-col\">\r\n      <button *ngIf=\"item.lostOrFound=='Lost'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Found It</button>\r\n      <button *ngIf=\"item.lostOrFound=='Found'\" (click)=\"claimButtonClick(item)\" class=\"btn white-text light-green darken-3 claim-btn\">Claim</button>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</div>\r\n<div class=\"divider light-green darken-3\"></div>\r\n</div>"
 
 /***/ }),
 
@@ -926,6 +1098,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemComponent", function() { return ItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_item_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/item.model */ "./src/app/models/item.model.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -937,9 +1110,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var ItemComponent = /** @class */ (function () {
-    function ItemComponent() {
+    function ItemComponent(router) {
+        var _this = this;
+        this.router = router;
         this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        this.claimButtonClick = function () {
+            _this.router.navigateByUrl("item/" + _this.item._id);
+        };
     }
     ItemComponent.prototype.ngOnInit = function () {
         this.item.date = new Date(this.item.date);
@@ -948,10 +1127,6 @@ var ItemComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('item'),
         __metadata("design:type", _models_item_model__WEBPACK_IMPORTED_MODULE_1__["Item"])
     ], ItemComponent.prototype, "item", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('claimButtonClick'),
-        __metadata("design:type", Object)
-    ], ItemComponent.prototype, "claimButtonClick", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('isRequestDisabled'),
         __metadata("design:type", Boolean)
@@ -962,7 +1137,7 @@ var ItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./item.component.html */ "./src/app/items/item/item.component.html"),
             styles: [__webpack_require__(/*! ./item.component.css */ "./src/app/items/item/item.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], ItemComponent);
     return ItemComponent;
 }());
@@ -989,7 +1164,7 @@ module.exports = ".modal-container\r\n{\r\n    min-height: 100vh;\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<items-filter [filters]=\"filters\" [applyFilters]=\"applyFilters\"></items-filter>\r\n<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\" [claimButtonClick]=\"setItemRequestForm\"></app-item>\r\n  <div id=\"itemClaimModal\" class=\"modal modal-container\">\r\n    <div class=\"container\">\r\n      <div class=\"modal-content\">\r\n        <h4 class=\"\">Claim Item</h4>\r\n        <app-item [item]=\"itemOnFocus\" isRequestDisabled=\"true\"></app-item>        \r\n        <div class=\"input-field\">\r\n          <i class=\"material-icons prefix\">assignment</i>\r\n          <textarea [(ngModel)]=\"itemRequestMessage\" class=\"materialize-textarea\" id=\"messageInput\" name=\"message\"></textarea>\r\n          <label for=\"messageInput\">Message</label>\r\n          <span class=\"helper-text\">Leave a message for the person who user who posted the item so that they could contact you back</span>\r\n        </div>\r\n        <div>\r\n          <button class=\"btn right light-green darken-3 white-text\" (click)=\"sendItemRequest()\">Send</button>\r\n          <button class=\"btn right\" (click)=\"hideItemRequestModal()\">Cancel</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<items-filter [filters]=\"filters\" [applyFilters]=\"applyFilters\"></items-filter>\r\n<div class=\"section container\">\r\n  <app-item *ngFor=\"let item of items, index as i\" [item]=\"item\"></app-item>\r\n</div>"
 
 /***/ }),
 
@@ -1027,33 +1202,9 @@ var ItemsComponent = /** @class */ (function () {
         this.routes = routes;
         this.userGuard = userGuard;
         this.filters = { lostOrFound: '', category: '', location: '' };
-        this.setItemRequestForm = function (item) {
-            if (_this.userGuard.canActivate(_this.routes.snapshot)) { }
-            _this.itemOnFocus = item;
-            if (_this.itemOnFocus.lostOrFound == 'Lost') {
-                _this.itemRequestAction = _this.sendFoundRequest;
-            }
-            else {
-                _this.itemRequestAction = _this.sendClaimRequest;
-            }
-            _this.showItemRequestModal();
-        };
         this.applyFilters = function () {
             _this.setItems();
         };
-        this.sendClaimRequest = function () {
-            return _this.itemsService.sendItemClaimRequest(_this.itemRequestMessage, _this.itemOnFocus._id);
-        };
-        this.sendFoundRequest = function () {
-            return _this.itemsService.sendItemFoundRequest(_this.itemRequestMessage, _this.itemOnFocus._id);
-        };
-        this.showItemRequestModal = function () {
-            document.getElementById('itemClaimModal').style.display = 'block';
-        };
-        this.hideItemRequestModal = function () {
-            document.getElementById('itemClaimModal').style.display = 'none';
-        };
-        this.itemOnFocus = mockItems[0];
     }
     ItemsComponent.prototype.setItems = function () {
         var _this = this;
@@ -1068,16 +1219,6 @@ var ItemsComponent = /** @class */ (function () {
             if (params['lostOrFound'])
                 _this.filters.lostOrFound = params['lostOrFound'];
             _this.setItems();
-        });
-    };
-    ItemsComponent.prototype.sendItemRequest = function () {
-        var _this = this;
-        this.itemRequestAction()
-            .subscribe(function (result) {
-            if (result.error) {
-                console.log(result.error);
-            }
-            _this.hideItemRequestModal();
         });
     };
     ItemsComponent = __decorate([
@@ -1240,7 +1381,7 @@ module.exports = ".side-nav-padded\r\n{\r\n    padding-left: 50px;\r\n}\r\n\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"navOffset\"></div>\r\n<nav class=\"light-green darken-3 nav-z\" id=\"navBar\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">CSIE</a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items/Lost\">Lost</a></li>\r\n              <li><a routerLink=\"/items/Found\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items/Lost\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items/Found\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<div id=\"navOffset\"></div>\r\n<nav class=\"light-green darken-3 nav-z\" id=\"navBar\">\r\n  <div class=\"nav-wrapper container\">\r\n    <a (click)=\"showMobileMenu()\" class=\"sidenav-trigger\">\r\n      <i class=\"material-icons\">menu</i>\r\n    </a>\r\n    <a href=\"#\" class=\"brand-logo\">\r\n      <img src=\"../../assets/images/lost-and-found.png\" alt=\"\">\r\n    </a>\r\n    <ul class=\"right hide-on-med-and-down\">\r\n      <li><a routerLink=\"/home\" >Home</a></li>\r\n      <li id=\"itemTab\" (mouseenter)=\"showDropDown()\" (mouseleave)=\"hideDropDown($event)\">\r\n        <a routerLink=\"/items\" class=\"dropdown-trigger\">Items\r\n          <i class=\"material-icons right\">arrow_drop_down</i>\r\n        </a>\r\n          <ul id=\"navDropDown\" (mouseleave)=\"hideDropDown($event)\" class=\"dropdown-content\">\r\n              <li><a routerLink=\"/items/Lost\">Lost</a></li>\r\n              <li><a routerLink=\"/items/Found\">Found</a></li>\r\n          </ul>\r\n      </li>\r\n      <li><a routerLink=\"/aboutUs\">About Us</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a routerLink=\"/dashboard\" >Dashboard</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signIn\" >Sign In</a></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\"><a routerLink=\"/signUp\" >Sign Up</a></li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\"><a (click)=\"logOut()\">Log Out</a></li>      \r\n    </ul>\r\n    <ul class=\"sidenav\" id=\"mobileMenu\">\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/home\" >Home</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a routerLink=\"/items\" class=\"light-green-text text-darken-3\">Items\r\n      </a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <div class=\"side-nav-padded\">\r\n      <li><a class=\"red-text\" routerLink=\"/items/Lost\" >Lost</a></li>\r\n      <li><a class=\"green-text\" routerLink=\"/items/Found\" >Found</a></li>      \r\n      </div>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li><a class=\"light-green-text text-darken-3\" routerLink=\"/aboutUs\" >About Us</a></li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/dashboard\" >Dashboard</a>\r\n      </li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signIn\" >Sign In</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n      <li *ngIf=\"!userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" routerLink=\"/signUp\" >Sign Up</a>\r\n      </li>      \r\n      <li *ngIf=\"userService.isLoggedIn()\">\r\n        <a class=\"light-green-text text-darken-3\" (click)=\"logOut()\">Log Out</a>\r\n      </li>\r\n      <li><div class=\"divider\"></div></li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1354,6 +1495,49 @@ var NavbarComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 var API_URL = './api/';
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/app.service.ts":
+/*!*****************************************!*\
+  !*** ./src/app/services/app.service.ts ***!
+  \*****************************************/
+/*! exports provided: AppService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppService", function() { return AppService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppService = /** @class */ (function () {
+    function AppService() {
+        this.makeToast = function (toast) {
+            var toastDiv = document.getElementById('toastDiv');
+            toastDiv.innerHTML = toast;
+            toastDiv.className = "show-toast";
+            setTimeout(function () { return toastDiv.classList.remove("show-toast"); }, 3000);
+        };
+    }
+    AppService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppService);
+    return AppService;
+}());
 
 
 
@@ -1580,6 +1764,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1593,9 +1778,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SignInComponent = /** @class */ (function () {
-    function SignInComponent(userService, router, activatedRoute) {
+    function SignInComponent(app, userService, router, activatedRoute) {
         var _this = this;
+        this.app = app;
         this.userService = userService;
         this.router = router;
         this.activatedRoute = activatedRoute;
@@ -1610,7 +1797,7 @@ var SignInComponent = /** @class */ (function () {
                         _this.router.navigateByUrl('/dashboard');
                 }
                 else {
-                    console.log('check credentials');
+                    _this.app.makeToast('Invalid Credentials');
                 }
             });
         };
@@ -1633,7 +1820,7 @@ var SignInComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-in.component.html */ "./src/app/sign-in/sign-in.component.html"),
             styles: [__webpack_require__(/*! ./sign-in.component.css */ "./src/app/sign-in/sign-in.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], _services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], SignInComponent);
     return SignInComponent;
 }());
@@ -1677,6 +1864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1690,9 +1878,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SignUpComponent = /** @class */ (function () {
-    function SignUpComponent(userService, router, activatedRoute) {
+    function SignUpComponent(app, userService, router, activatedRoute) {
         var _this = this;
+        this.app = app;
         this.userService = userService;
         this.router = router;
         this.activatedRoute = activatedRoute;
@@ -1702,20 +1892,45 @@ var SignUpComponent = /** @class */ (function () {
             password: ''
         };
         this.password = '';
-        this.signUp = function () {
-            console.log(event.target);
-            _this.userService.signUp(_this.user)
-                .subscribe(function (result) {
-                if (result.created) {
-                    if (_this.forwardTo)
-                        _this.router.navigateByUrl("/" + _this.forwardTo);
-                    _this.router.navigateByUrl('/signIn');
-                }
-                else {
-                    _this.resetValues();
-                    console.log(result.error);
-                }
+        this.validateUser = function () {
+            return new Promise(function (resolve, reject) {
+                if (_this.user.name === '')
+                    reject('Name is mandatory');
+                var emailValidator = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (!emailValidator.test(_this.user.email))
+                    reject('Invalid email format');
+                if (_this.password != _this.user.password)
+                    reject('Passwords do not match');
+                var length = _this.password.lenght * 1;
+                var passwordValidator = /^[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                if (!passwordValidator.test(_this.password))
+                    reject('Password is too short');
+                passwordValidator = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                if (!passwordValidator.test(_this.password))
+                    reject('Password is not strong enough');
+                passwordValidator = new RegExp('password');
+                if (passwordValidator.test(_this.password.toLowerCase()))
+                    reject('Password should not contain password');
+                resolve();
             });
+        };
+        this.signUp = function () {
+            _this.validateUser().then(function () {
+                _this.userService.signUp(_this.user)
+                    .subscribe(function (result) {
+                    if (result.created) {
+                        if (_this.forwardTo)
+                            _this.router.navigateByUrl("/" + _this.forwardTo);
+                        else
+                            _this.router.navigateByUrl('/signIn');
+                    }
+                    else {
+                        _this.resetValues();
+                        _this.app.makeToast(result.error.message);
+                    }
+                });
+            })
+                .catch(function (error) { return _this.app.makeToast(error); });
         };
         this.keyDown = function (event) {
             if (event.key === "Enter") {
@@ -1744,7 +1959,7 @@ var SignUpComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-up.component.html */ "./src/app/sign-up/sign-up.component.html"),
             styles: [__webpack_require__(/*! ./sign-up.component.css */ "./src/app/sign-up/sign-up.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
     ], SignUpComponent);
     return SignUpComponent;
 }());

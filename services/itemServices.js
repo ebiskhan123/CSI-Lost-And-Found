@@ -120,7 +120,8 @@ module.exports.getMyItems = (user) => {
 
 module.exports.getItem = (itemId) => {
     return new Promise((resolve, reject) => {
-        Item.findById(itemId, (error, data) => {
+        Item.findById(itemId).populate({path: 'location', populate:{path: 'city'}})
+        .exec((error, data) => {
             if(error) {
                 reject(error)
             }
