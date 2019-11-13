@@ -75,7 +75,7 @@ router.patch('/api/resolveItem/:itemId', (request, response) => {
     .then((user) => {
         itemServices.getItem(request.params.itemId)
         .then((item) => {
-            if(item.owner === user._id) {
+            if(item.owner.toString() === user._id.toString()) {
                 itemServices.markAsResolved(item._id)
                 .then((data) => response.status(200).send())
                 .catch((error) => response.status(500).send(error))

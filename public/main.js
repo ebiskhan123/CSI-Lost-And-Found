@@ -466,6 +466,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_item_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/item.model */ "./src/app/models/item.model.ts");
 /* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -478,8 +479,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DashboardItemComponent = /** @class */ (function () {
-    function DashboardItemComponent(itemServices) {
+    function DashboardItemComponent(app, itemServices) {
+        this.app = app;
         this.itemServices = itemServices;
         this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     }
@@ -487,10 +490,15 @@ var DashboardItemComponent = /** @class */ (function () {
         this.item.date = new Date(this.item.date);
     };
     DashboardItemComponent.prototype.resolveItem = function () {
+        var _this = this;
         this.itemServices.resolveItem(this.item._id)
             .subscribe(function (result) {
             if (result.error) {
+                _this.app.makeToast('Error processrin request');
                 console.log(result.error);
+            }
+            else {
+                _this.app.makeToast('Resolved');
             }
         });
     };
@@ -504,7 +512,7 @@ var DashboardItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dashboard-item.component.html */ "./src/app/dashboard/dashboard-item/dashboard-item.component.html"),
             styles: [__webpack_require__(/*! ./dashboard-item.component.css */ "./src/app/dashboard/dashboard-item/dashboard-item.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], src_app_services_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
     ], DashboardItemComponent);
     return DashboardItemComponent;
 }());
@@ -895,6 +903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -907,15 +916,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var ItemComponent = /** @class */ (function () {
-    function ItemComponent(itemsService, routes) {
+    function ItemComponent(router, app, itemsService, routes) {
         var _this = this;
+        this.router = router;
+        this.app = app;
         this.itemsService = itemsService;
         this.routes = routes;
+        this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         this.setItem = function (itemId) {
             _this.itemsService.getItem(itemId)
                 .subscribe(function (item) {
                 _this.item = item;
+                _this.item.date = new Date(_this.item.date);
                 _this.setItemRequestAction();
             });
         };
@@ -933,10 +948,16 @@ var ItemComponent = /** @class */ (function () {
         };
     }
     ItemComponent.prototype.sendItemRequest = function () {
+        var _this = this;
         this.itemRequestAction()
             .subscribe(function (result) {
             if (result.error) {
                 console.log(result.error);
+                _this.app.makeToast("Couldn't process request");
+            }
+            else {
+                _this.app.makeToast('Done');
+                _this.router.navigateByUrl('items');
             }
         });
     };
@@ -950,7 +971,7 @@ var ItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./item.component.html */ "./src/app/item/item.component.html"),
             styles: [__webpack_require__(/*! ./item.component.css */ "./src/app/item/item.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["ItemsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], ItemComponent);
     return ItemComponent;
 }());
