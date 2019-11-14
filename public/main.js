@@ -494,7 +494,7 @@ var DashboardItemComponent = /** @class */ (function () {
         this.itemServices.resolveItem(this.item._id)
             .subscribe(function (result) {
             if (result.error) {
-                _this.app.makeToast('Error processrin request');
+                _this.app.makeToast('Error processring request');
                 console.log(result.error);
             }
             else {
@@ -1719,7 +1719,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.signUp = function (user) {
         return this.http.post(this.signUpUrl, user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mapTo"])({ created: true }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) {
             console.log(error);
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ created: false, error: error });
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ created: false, error: error.error });
         }));
     };
     UserService.prototype.signIn = function (user) {

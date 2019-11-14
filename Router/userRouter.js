@@ -11,8 +11,10 @@ router.post('/api/signUp', async (req, res) => {
         await user.save()
         res.status(201).send()
     } catch (e) {
-        console.log(e);
-        res.status(400).send(e)
+        if(e.errmsg.includes("duplicate"))
+            res.status(400).send({message: "Account already exists"})
+        else
+            res.status(500).send("An error occured")
     }
 })
 
