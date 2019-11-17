@@ -1675,7 +1675,7 @@ var ResetPasswordComponent = /** @class */ (function () {
                     reject('Password is too short');
                 passwordValidator = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
                 if (!passwordValidator.test(_this.password))
-                    reject('Password is not strong enough');
+                    reject('Password should have atleast 8 characters');
                 passwordValidator = new RegExp('password');
                 if (passwordValidator.test(_this.password.toLowerCase()))
                     reject('Password should not contain password');
@@ -2171,7 +2171,7 @@ var SignUpComponent = /** @class */ (function () {
                     reject('Password is too short');
                 passwordValidator = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
                 if (!passwordValidator.test(_this.password))
-                    reject('Password is not strong enough');
+                    reject('Password should have atleast 8 characters');
                 passwordValidator = new RegExp('password');
                 if (passwordValidator.test(_this.password.toLowerCase()))
                     reject('Password should not contain password');
