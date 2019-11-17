@@ -2,8 +2,9 @@ const express = require('express')
 const multer = require('multer')
 const sharp = require('sharp')
 const auth = require('../middleware/auth')
-const path = require('path');
-let itemServices = require('../services/itemServices');
+const path = require('path')
+let itemServices = require('../services/itemServices')
+let userServices = require('../services/userServices')
 const router = new express.Router()
 
 router.post('/api/item', async (req, res) => {
@@ -26,7 +27,11 @@ router.get('/image/:imageName', (request, response) => {
 })
 
 router.get('/api/items', async (req, res) => {
-    let filters = JSON.parse(req.query.params)
+    let filters = {}
+    try {
+        filters = JSON.parse(req.query.params)
+    }
+    catch(e) {}
     for(var filter in filters) {
         if(!filters[filter])
             delete filters[filter]
@@ -55,6 +60,18 @@ router.post('/api/claimItem/:itemId', (request, response) => {
 
 router.get('/api/item/categories', (request, response) => {
     response.send(itemServices.getItemCategories());
+})
+
+router.delete('/api/item/:itemId', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        itemServices.deleteItem(request.params.itemId)
+        .then(() => response.status(200).send())
+        .catch((error) => response.status(500).send(error))
+    }
+    else {
+        response.status(401).send('Unauthorized Access')
+    }
 })
 
 router.post('/api/foundItem/:itemId', (request, response) => {

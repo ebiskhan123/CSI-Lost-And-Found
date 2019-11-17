@@ -8,7 +8,7 @@ require('./db/mongoose')
 const userRouter = require('./Router/userRouter')
 const itemRouter = require('./Router/itemRouter')
 const locationRouter = require('./Router/locationRouter')
-
+const adminRouter = require('./Router/adminRouter')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -17,6 +17,7 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+adminRouter(app)
 app.use(itemRouter)
 app.use(userRouter)
 app.use(locationRouter)
@@ -29,9 +30,8 @@ app.get('/test', function(req, res) {
     res.sendFile('views/test.html', {root: __dirname })
 });
 
-app.get('/admin', function(req, res) {
-    res.sendFile('Admin/admin.html', {root: __dirname })
-});
+
+
 
 
 app.get('/*', (req, res) => {

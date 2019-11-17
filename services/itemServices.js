@@ -28,6 +28,16 @@ module.exports.saveItem = async (request, response, user) => {
     })
 }
 
+module.exports.deleteItem = (itemId) => {
+    return new Promise((resolve, reject) => {
+        Item.remove({_id: itemId}, (error) => {
+            if(error)
+                reject(error)
+            resolve()
+        })
+    })
+}
+
 module.exports.getItemCategories = () => {
     return ItemModel.categories;
 }

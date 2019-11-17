@@ -1,12 +1,13 @@
 <html>
     <body>
+        <a href="../admin">Back</a>
         <div id="loginDiv">
-            <input type="password" id="passwordInput" placeholder="password">
-            <button onclick="authenticate()">Log In</button>            
+            Nothing to show            
         </div>
         <div id = "adminDiv">
-            <a href="./admin/cities">Manage Cities</a>
-            <a href="./admin/items">Manage Items</a>
+            <input type="text" id="cityInput" placeholder="City Name">
+            <button onclick="addCity()">Add</button>
+            <div id="citiesDiv"></div>
         </div>
     <script>
         window.onload = () => {
@@ -18,6 +19,7 @@
             .then((loggedIn) => {
                 if(loggedIn === 'true') {
                     showAdminView()
+                    resetCities()
                 }
                 else
                     showLoginView()
@@ -36,7 +38,7 @@
 
         let checkAuthentication = () => {
             xhr = new XMLHttpRequest();
-            xhr.open("GET", './api/admin/isLoggedIn', true)
+            xhr.open("GET", '../api/admin/isLoggedIn', true)
             return new Promise((resolve, reject) => {
                 xhr.onload = () => {
                     resolve(xhr.response)
@@ -48,20 +50,7 @@
             })
         }
 
-        let authenticate = () => {
-            let password = document.getElementById('passwordInput').value
-            document.getElementById('passwordInput').value = ''
-            xhr.open("POST", './api/admin/logIn', true)
-            xhr.setRequestHeader("content-type", "application/json")
-            xhr.onload = () => {
-                initialize()
-            }
-            xhr.onerror = (error) => {
-                console.log(error)
-            }
-            xhr.send(JSON.stringify({password: password}))
-        }
-
+        
         let resetCities = () => {
             document.getElementById('citiesDiv').innerHTML = '';
             getCities().then(async (cities) => {
@@ -135,7 +124,7 @@
 
         let getCities = () => {
             xhr = new XMLHttpRequest();
-            xhr.open("GET", './api/cities', true)
+            xhr.open("GET", '../api/cities', true)
             return new Promise((resolve, reject) => {
                 xhr.onload = () => {
                     resolve(JSON.parse(xhr.response));
@@ -149,7 +138,7 @@
 
         let getAreas = (cityId) => {
             xhr = new XMLHttpRequest();
-            xhr.open("GET", `./api/areas/${cityId}`, true)
+            xhr.open("GET", `../api/areas/${cityId}`, true)
             return new Promise((resolve, reject) => {
                 xhr.onload = () => {
                     resolve(JSON.parse(xhr.response));
@@ -163,7 +152,7 @@
 
         let deleteArea = (areaId) => {
             xhr = new XMLHttpRequest();
-            xhr.open("DELETE", `./api/area/${areaId}`, true)
+            xhr.open("DELETE", `../api/area/${areaId}`, true)
             return new Promise((resolve, reject) => {
                 xhr.onload = () => {
                     resetCities()
@@ -177,7 +166,7 @@
 
         let deleteCity = (cityId) => {
             xhr = new XMLHttpRequest();
-            xhr.open("DELETE", `./api/city/${cityId}`, true)
+            xhr.open("DELETE", `../api/city/${cityId}`, true)
             return new Promise((resolve, reject) => {
                 xhr.onload = () => {
                     resetCities()
@@ -191,7 +180,7 @@
 
         const postArea = (area) => {
             xhr = new XMLHttpRequest();
-            xhr.open("POST", './api/area', true)
+            xhr.open("POST", '../api/area', true)
             xhr.setRequestHeader("content-type", "application/json")
             xhr.onload = () => {
                 resetCities();
@@ -211,7 +200,7 @@
 
         const addCity = () => {
             xhr = new XMLHttpRequest();
-            xhr.open("POST", './api/city', true)
+            xhr.open("POST", '../api/city', true)
             xhr.setRequestHeader("content-type", "application/json")
             xhr.onload = () => {
                 resetCities();

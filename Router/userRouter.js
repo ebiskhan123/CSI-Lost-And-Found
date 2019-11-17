@@ -82,6 +82,19 @@ router.post('/users/logoutAll', auth, async (req, res) => {
     }
 })
 
+router.get('/api/user/:userId', async (request, response) => {
+    let loggedIn = await userServices.isAdminLoggedIn(request)
+    if(loggedIn) {
+        userServices.getUser(request.params.userId)
+        .then(user => {
+            delete user['password']
+            delete user['passwordResetToken']
+            response.send(user)
+        })
+    }
+    response.status(401).send('Unauthorized access')
+})
+
 router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
 })

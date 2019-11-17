@@ -1,0 +1,88 @@
+<html>
+        <body>
+            <style>
+               
+            </style>
+            <a href="../admin">Back</a>
+            <div id="loginDiv">
+                Nothing to show            
+            </div>
+            <div id = "adminDiv">
+                <input type="text" value="" id="userInput" placeholder="id">
+                <button onclick="setUser()">Get</button>
+                <div id="usersDiv"></div>
+            </div>
+        <script>
+            window.onload = () => {
+                initialize()
+            }
+    
+            let initialize = () => {
+                checkAuthentication()
+                .then((loggedIn) => {
+                    if(loggedIn === 'true') {
+                        showAdminView()
+                    }
+                    else
+                        showLoginView()
+                })
+            }
+    
+            let showLoginView = () => {
+                document.getElementById('adminDiv').style.display = 'none'
+                document.getElementById('loginDiv').style.display = 'block'
+            }
+    
+            let showAdminView = () => {
+                document.getElementById('adminDiv').style.display = 'block'
+                document.getElementById('loginDiv').style.display = 'none'
+            }
+    
+            let checkAuthentication = () => {
+                xhr = new XMLHttpRequest();
+                xhr.open("GET", '../api/admin/isLoggedIn', true)
+                return new Promise((resolve, reject) => {
+                    xhr.onload = () => {
+                        resolve(xhr.response)
+                    }
+                    xhr.onerror = (error) => {
+                        resolve(false)
+                    }
+                    xhr.send()
+                })
+            }
+    
+            
+            let setUser = () => {
+                document.getElementById('usersDiv').innerHTML = '';
+                userId = document.getElementById('userInput').value
+                getUser(userId).then(async (user) => {
+                    addUserDivision(user)
+                })
+            }
+    
+            let addUserDivision = (user) => {
+                let userDiv = document.createElement('DIV')
+                userDiv.innerHTML = `<b>${user.name}<b><br>`
+                userDiv.innerHTML += JSON.stringify(user) + '<br>'
+                userDiv.id = `userDiv${user._id}`
+                document.getElementById('usersDiv').appendChild(userDiv)
+            }
+    
+            
+            let getUser = (userId) => {
+                xhr = new XMLHttpRequest();
+                xhr.open("GET", `../api/user/${userId}`, true)
+                return new Promise((resolve, reject) => {
+                    xhr.onload = () => {
+                        resolve(JSON.parse(xhr.response));
+                    }
+                    xhr.onerror = (error) => {
+                        console.log(error)
+                    }
+                    xhr.send()
+                })
+            }
+       </script>
+        </body>
+    </html>
