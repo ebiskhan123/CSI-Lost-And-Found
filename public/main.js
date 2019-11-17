@@ -246,6 +246,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _guards_user_guard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./guards/user.guard */ "./src/app/guards/user.guard.ts");
 /* harmony import */ var src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/item/item.component */ "./src/app/item/item.component.ts");
 /* harmony import */ var src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/about-us/about-us.component */ "./src/app/about-us/about-us.component.ts");
+/* harmony import */ var src_app_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/forgot-password/forgot-password.component */ "./src/app/forgot-password/forgot-password.component.ts");
+/* harmony import */ var src_app_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/reset-password/reset-password.component */ "./src/app/reset-password/reset-password.component.ts");
+/* harmony import */ var src_app_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/terms-and-conditions/terms-and-conditions.component */ "./src/app/terms-and-conditions/terms-and-conditions.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -264,12 +267,18 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var routes = [
     { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
     { path: 'aboutUs', component: src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__["AboutUsComponent"] },
+    { path: 'termsAndConditions', component: src_app_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_14__["TermsAndConditionsComponent"] },
     { path: 'signIn', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
     { path: 'signUp', component: _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
+    { path: 'forgotPassword', component: src_app_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_12__["ForgotPasswordComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
+    { path: 'resetPassword/:userId/:resetToken', component: src_app_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_13__["ResetPasswordComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]] },
     { path: 'items', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
     { path: 'items/:lostOrFound', component: _items_items_component__WEBPACK_IMPORTED_MODULE_5__["ItemsComponent"] },
     { path: 'item/:itemId', component: src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__["ItemComponent"], canActivate: [_guards_user_guard__WEBPACK_IMPORTED_MODULE_9__["UserGuard"]] },
@@ -288,7 +297,7 @@ var AppRoutingModule = /** @class */ (function () {
     return AppRoutingModule;
 }());
 
-var routingComponents = [_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"], src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__["AboutUsComponent"], _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"], src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__["ItemComponent"]];
+var routingComponents = [_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"], src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_11__["AboutUsComponent"], src_app_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_14__["TermsAndConditionsComponent"], src_app_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_13__["ResetPasswordComponent"], src_app_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_12__["ForgotPasswordComponent"], _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_3__["SignInComponent"], _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"], _add_item_add_item_component__WEBPACK_IMPORTED_MODULE_7__["AddItemComponent"], src_app_item_item_component__WEBPACK_IMPORTED_MODULE_10__["ItemComponent"]];
 
 
 /***/ }),
@@ -693,6 +702,96 @@ var FooterComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], FooterComponent);
     return FooterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/forgot-password/forgot-password.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/forgot-password/forgot-password.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".hide\r\n{\r\n    display: none !important\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9yZ290LXBhc3N3b3JkL2ZvcmdvdC1wYXNzd29yZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHdCQUF3QjtDQUMzQiIsImZpbGUiOiJzcmMvYXBwL2ZvcmdvdC1wYXNzd29yZC9mb3Jnb3QtcGFzc3dvcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oaWRlXHJcbntcclxuICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudFxyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/forgot-password/forgot-password.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/forgot-password/forgot-password.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section container\">\n  <h2 class=\"light-green-text text-darken-3 center\">Password Recovery</h2>\n  <div id=\"emailEntry\">\n  <div class=\"row\">\n    <div class=\"col s12 l4 offset-l8 pull-l4\">\n      <div class=\"input-field\">\n        <i class=\"material-icons prefix\">email</i>\n        <input type=\"email\" [(ngModel)]=\"email\" id=\"emailInput\" name=\"email\">\n        <label for=\"emailInput\">Enter your email</label>\n      </div>\n    </div>\n  </div>\n  <div class=\"center\">\n    <a class=\"btn\" routerLink=\"/signIn\">Cancel</a>\n    <div class=\"btn light-green darken-3 white-text\" (click)=\"sendPasswordRecoveryRequest()\">Submit</div>\n  </div>\n  </div>\n  <div class=\"hide\" id=\"messageDiv\">\n  <div class=\"row\">\n    <div class=\"col s12 l8 offset-l4 pull-l2\">\n      An email containing the password reset link has been sent to your registered email id. \n      Please follow the link to reset your password.\n    </div>\n  </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/forgot-password/forgot-password.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/forgot-password/forgot-password.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ForgotPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function() { return ForgotPasswordComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/user.service */ "./src/app/services/user.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ForgotPasswordComponent = /** @class */ (function () {
+    function ForgotPasswordComponent(app, userService) {
+        var _this = this;
+        this.app = app;
+        this.userService = userService;
+        this.email = '';
+        this.sendPasswordRecoveryRequest = function () {
+            _this.userService.requestPasswordReset(_this.email)
+                .subscribe(function (result) {
+                if (result.success) {
+                    _this.showMessage();
+                    _this.app.makeToast('Done');
+                }
+                else {
+                    if (result.error.status === 400)
+                        _this.app.makeToast('Email does not exist');
+                    else
+                        _this.app.makeToast("Couldn't process request");
+                }
+            });
+        };
+        this.showMessage = function () {
+            document.getElementById("emailEntry").classList.add('hide');
+            document.getElementById("messageDiv").classList.remove('hide');
+        };
+    }
+    ForgotPasswordComponent.prototype.ngOnInit = function () {
+    };
+    ForgotPasswordComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-forgot-password',
+            template: __webpack_require__(/*! ./forgot-password.component.html */ "./src/app/forgot-password/forgot-password.component.html"),
+            styles: [__webpack_require__(/*! ./forgot-password.component.css */ "./src/app/forgot-password/forgot-password.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_1__["AppService"], src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]])
+    ], ForgotPasswordComponent);
+    return ForgotPasswordComponent;
 }());
 
 
@@ -1505,6 +1604,138 @@ var NavbarComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/reset-password/reset-password.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/reset-password/reset-password.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc2V0LXBhc3N3b3JkL3Jlc2V0LXBhc3N3b3JkLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/reset-password/reset-password.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/reset-password/reset-password.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section container\">\n  <h2 class=\"light-green-text text-darken-3 center\">Reset Password</h2>\n  <p class=\"center\">Hi {{user.name}}, you can reset your password here</p>\n  <div class=\"row\">\n    <div class=\"col s12 l4 offset-l8 pull-l4\">\n        <div class=\"input-field\">\n          <i class=\"material-icons prefix\">lock_open</i>\n          <input type=\"password\" [(ngModel)]=\"user.password\" id=\"passwordInput\" name=\"password\">\n          <label for=\"passwordInput\">New Password</label>\n        </div>\n        <div class=\"input-field\">\n          <i class=\"material-icons prefix\">lock</i>\n          <input type=\"password\" [(ngModel)]=\"password\" id=\"confirmPasswordInput\" name=\"confirmPassword\">\n          <label for=\"confirmPasswordInput\">Confirm Password</label>\n        </div>\n    </div>\n  </div>\n  <div class=\"center\">\n    <a class=\"btn\" routerLink=\"/signIn\">Cancel</a>\n    <div class=\"btn light-green darken-3 white-text\" (click)=\"resetPassword()\">Reset</div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/reset-password/reset-password.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/reset-password/reset-password.component.ts ***!
+  \************************************************************/
+/*! exports provided: ResetPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResetPasswordComponent", function() { return ResetPasswordComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ResetPasswordComponent = /** @class */ (function () {
+    function ResetPasswordComponent(app, userService, routes, router) {
+        var _this = this;
+        this.app = app;
+        this.userService = userService;
+        this.routes = routes;
+        this.router = router;
+        this.user = { name: '', password: '' };
+        this.userId = '';
+        this.resetToken = '';
+        this.password = '';
+        this.validatePassword = function () {
+            return new Promise(function (resolve, reject) {
+                if (_this.password != _this.user.password)
+                    reject('Passwords do not match');
+                var length = _this.password.lenght * 1;
+                var passwordValidator = /^[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                if (!passwordValidator.test(_this.password))
+                    reject('Password is too short');
+                passwordValidator = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                if (!passwordValidator.test(_this.password))
+                    reject('Password is not strong enough');
+                passwordValidator = new RegExp('password');
+                if (passwordValidator.test(_this.password.toLowerCase()))
+                    reject('Password should not contain password');
+                resolve();
+            });
+        };
+        this.resetPassword = function () {
+            _this.validatePassword()
+                .then(function () {
+                _this.userService.resetPassword({ password: _this.user.password }, _this.userId, _this.resetToken)
+                    .subscribe(function (result) {
+                    if (result) {
+                        _this.app.makeToast('Done');
+                        _this.router.navigateByUrl('signIn');
+                    }
+                    else
+                        _this.app.makeToast("Couldn't process request");
+                });
+            })
+                .catch(function (error) { return _this.app.makeToast(error); });
+        };
+        this.setUser = function () {
+            _this.userService.getUserName(_this.userId, _this.resetToken)
+                .subscribe(function (response) {
+                if (response.error) {
+                    if (response.error.status === 400)
+                        _this.app.makeToast('The reset link is broken');
+                    else
+                        _this.app.makeToast("Couldn't process request");
+                    _this.router.navigateByUrl('signIn');
+                }
+                _this.user.name = response.name;
+            });
+        };
+    }
+    ResetPasswordComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routes.params.subscribe(function (params) {
+            if (params['userId'])
+                _this.userId = params['userId'];
+            if (params['resetToken'])
+                _this.resetToken = params['resetToken'];
+            _this.setUser();
+        });
+    };
+    ResetPasswordComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-reset-password',
+            template: __webpack_require__(/*! ./reset-password.component.html */ "./src/app/reset-password/reset-password.component.html"),
+            styles: [__webpack_require__(/*! ./reset-password.component.css */ "./src/app/reset-password/reset-password.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_1__["AppService"], src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], ResetPasswordComponent);
+    return ResetPasswordComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/app.config.ts":
 /*!****************************************!*\
   !*** ./src/app/services/app.config.ts ***!
@@ -1700,7 +1931,19 @@ var UserService = /** @class */ (function () {
         this.signUpUrl = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + 'signUp';
         this.signInUrl = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + 'signIn';
         this.logOutUrl = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + 'logOut';
+        this.passwordResetUrl = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + 'resetPassword';
         this.JWT = 'JWT';
+        this.requestPasswordReset = function (email) {
+            return _this.http.post(_this.passwordResetUrl, { email: email }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mapTo"])({ success: true }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ success: false, error: error }); }));
+        };
+        this.getUserName = function (userId, resetToken) {
+            var url = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + "user/" + userId + "/" + resetToken;
+            return _this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ error: error }); }));
+        };
+        this.resetPassword = function (password, userId, resetToken) {
+            var url = _app_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + "user/" + userId + "/" + resetToken;
+            return _this.http.post(url, { password: password }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mapTo"])(true), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(false); }));
+        };
         this.isLoggedIn = function () {
             if (_this.getJwt())
                 return true;
@@ -1768,7 +2011,7 @@ module.exports = ".section\r\n{\r\n    padding-top: 6vw; \r\n}\r\n/*# sourceMapp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n    <div class=\"input-field\">\r\n      <i class=\"material-icons prefix\">email</i>\r\n      <input type=\"email\" [(ngModel)]=\"credentials.email\" id=\"emailInput\" name=\"email\">\r\n      <label for=\"emailInput\">Email</label>\r\n    </div>\r\n    <div class=\"input-field\" (keydown)=\"keyDown($event)\">\r\n      <i class=\"material-icons prefix\">lock</i>\r\n      <input type=\"password\" [(ngModel)]=\"credentials.password\" id=\"passwordInput\" name=\"password\">\r\n      <label for=\"passwordInput\">Password</label>\r\n    </div>\r\n    <div class=\"input-field center\">\r\n      <button class=\"btn light-green darken-3 white-text\" (click)=\"signIn()\">Sign In</button>\r\n    </div>\r\n    <div class=\"\">New User? <a routerLink=\"/signUp\" [queryParams]=\"{forwardTo: '' + forwardTo}\">Create Account</a></div>\r\n  </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"section container\">\r\n  <div class=\"row\">\r\n  <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n    <div class=\"input-field\">\r\n      <i class=\"material-icons prefix\">email</i>\r\n      <input type=\"email\" [(ngModel)]=\"credentials.email\" id=\"emailInput\" name=\"email\">\r\n      <label for=\"emailInput\">Email</label>\r\n    </div>\r\n    <div class=\"input-field\" (keydown)=\"keyDown($event)\">\r\n      <i class=\"material-icons prefix\">lock</i>\r\n      <input type=\"password\" [(ngModel)]=\"credentials.password\" id=\"passwordInput\" name=\"password\">\r\n      <label for=\"passwordInput\">Password</label>\r\n    </div>\r\n    <div class=\"input-field center\">\r\n      <button class=\"btn light-green darken-3 white-text\" (click)=\"signIn()\">Sign In</button>\r\n    </div>\r\n    <div class=\"\">New User? <a routerLink=\"/signUp\" [queryParams]=\"{forwardTo: '' + forwardTo}\">Create Account</a></div>\r\n    <div class=\"\" style=\"margin-top:1vw\"><a routerLink=\"/forgotPassword\">Forgot Password</a></div>\r\n  </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1868,7 +2111,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section container\" (keydown)=\"keyDown($event)\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">person</i>\r\n        <input type=\"text\" [(ngModel)]=\"user.name\" id=\"nameInput\" name=\"name\">\r\n        <label for=\"nameInput\">Name</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">email</i>\r\n        <input type=\"email\" [(ngModel)]=\"user.email\" id=\"emailInput\" name=\"email\">\r\n        <label for=\"emailInput\">Email</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">lock_open</i>\r\n        <input type=\"password\" [(ngModel)]=\"user.password\" id=\"passwordInput\" name=\"password\">\r\n        <label for=\"passwordInput\">Password</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">lock</i>\r\n        <input type=\"password\" [(ngModel)]=\"password\" id=\"confirmPasswordInput\" name=\"confirmPassword\">\r\n        <label for=\"confirmPasswordInput\">Confirm Password</label>\r\n      </div>\r\n      <div class=\"input-field center\">\r\n        <button class=\"btn light-green darken-3 white-text\" (click)=\"signUp(event)\">Sign Up</button>\r\n      </div>\r\n      <div class=\"\">Already have an account? <a routerLink=\"/signIn\">Sign In</a></div>\r\n    </div>\r\n    </div>\r\n  </div>\r\n  \r\n"
+module.exports = "<div class=\"section container\" (keydown)=\"keyDown($event)\">\r\n    <div class=\"row\">\r\n    <div class=\"col s12 l4 offset-l8 pull-l4 center-align\">\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">person</i>\r\n        <input type=\"text\" [(ngModel)]=\"user.name\" id=\"nameInput\" name=\"name\">\r\n        <label for=\"nameInput\">Name</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">email</i>\r\n        <input type=\"email\" [(ngModel)]=\"user.email\" id=\"emailInput\" name=\"email\">\r\n        <label for=\"emailInput\">Email</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">lock_open</i>\r\n        <input type=\"password\" [(ngModel)]=\"user.password\" id=\"passwordInput\" name=\"password\">\r\n        <label for=\"passwordInput\">Password</label>\r\n      </div>\r\n      <div class=\"input-field\">\r\n        <i class=\"material-icons prefix\">lock</i>\r\n        <input type=\"password\" [(ngModel)]=\"password\" id=\"confirmPasswordInput\" name=\"confirmPassword\">\r\n        <label for=\"confirmPasswordInput\">Confirm Password</label>\r\n      </div>\r\n      <div class=\"input-field center\">\r\n        <button class=\"btn light-green darken-3 white-text\" (click)=\"signUp(event)\">Sign Up</button>\r\n      </div>\r\n      <div class=\"\">Already have an account? <a routerLink=\"/signIn\">Sign In</a></div>\r\n    </div>\r\n    <div class=\"center-align\" style=\"width:100%; margin-top:1vw\">*By clicking sign up you agree to our <a routerLink=\"/termsAndConditions\">Terms and Conditions</a></div>\r\n  </div>\r\n  </div>\r\n  \r\n"
 
 /***/ }),
 
@@ -1983,6 +2226,69 @@ var SignUpComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"], _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
     ], SignUpComponent);
     return SignUpComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/terms-and-conditions/terms-and-conditions.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/terms-and-conditions/terms-and-conditions.component.css ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rlcm1zLWFuZC1jb25kaXRpb25zL3Rlcm1zLWFuZC1jb25kaXRpb25zLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/terms-and-conditions/terms-and-conditions.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/app/terms-and-conditions/terms-and-conditions.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section container\">\n  <h2 class=\"light-green-text text-darken-3 center\">Terms and Conditions</h2>\n  <p class=\"flow-text\">We flex nuts</p>\n  <div class=\"center\">\n    <a routerLink='/signUp' class=\"btn center\">Close</a>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/terms-and-conditions/terms-and-conditions.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/terms-and-conditions/terms-and-conditions.component.ts ***!
+  \************************************************************************/
+/*! exports provided: TermsAndConditionsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsAndConditionsComponent", function() { return TermsAndConditionsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TermsAndConditionsComponent = /** @class */ (function () {
+    function TermsAndConditionsComponent() {
+    }
+    TermsAndConditionsComponent.prototype.ngOnInit = function () {
+    };
+    TermsAndConditionsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-terms-and-conditions',
+            template: __webpack_require__(/*! ./terms-and-conditions.component.html */ "./src/app/terms-and-conditions/terms-and-conditions.component.html"),
+            styles: [__webpack_require__(/*! ./terms-and-conditions.component.css */ "./src/app/terms-and-conditions/terms-and-conditions.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TermsAndConditionsComponent);
+    return TermsAndConditionsComponent;
 }());
 
 

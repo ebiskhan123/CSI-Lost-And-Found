@@ -18,6 +18,46 @@ router.post('/api/signUp', async (req, res) => {
     }
 })
 
+router.get('/api/user/:userId/:resetToken', (request, response) => {
+    userServices.getUser(request.params.userId)
+    .then((user) => {
+        if(user.passwordResetToken.token === request.params.resetToken)
+            {
+                response.send({name: user.name})
+            }
+        else
+            response.status(400).send('Broken reset link')
+    })
+    .catch((error) => response.status(400).send(error))
+})
+
+
+router.post('/api/user/:userId/:resetToken', (request, response) => {
+    userServices.getUser(request.params.userId)
+    .then((user) => {
+        if(user.passwordResetToken.token === request.params.resetToken)
+            {
+                userServices.changePassword(user, request.body.password.password)
+                .then((data) => response.status(200).send())
+                .catch(error => response.status(500).send(error))
+            }
+        else
+            response.status(400).send('Broken reset link')
+    })
+    .catch((error) => response.status(400).send(error))
+})
+
+
+router.post('/api/resetPassword', (request, response) => {
+    userServices.getUserByEmail(request.body.email)
+    .then(user => {
+        userServices.sendPasswordResetEmail(user)
+        .then(result => response.status(200).send())
+        .catch(error => resopnse.status(500).send(error))
+    })
+    .catch((error) => response.status(400).send(error))
+})
+
 router.post('/api/signIn', async (req, res) => {
     try {
         let user = await User.findByCredentials(req.body.email, req.body.password)

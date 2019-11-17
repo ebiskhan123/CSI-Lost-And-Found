@@ -32,6 +32,9 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
+    passwordResetToken: {
+        type: mongoose.Schema.Types.Mixed
+    },
     tokens: [{
         token: {
             type: String,

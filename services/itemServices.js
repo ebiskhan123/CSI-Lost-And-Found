@@ -1,9 +1,9 @@
 let ItemModel = require('../Models/item')
 let Item = ItemModel.Item
-let fs = require('fs');
-let multer = require('multer');
-let mailer = require('../lib/mailing/mailer');
-let UserServices = require('./userServices');
+let fs = require('fs')
+let multer = require('multer')
+let mailer = require('../lib/mailing/mailer')
+let UserServices = require('./userServices')
 
 module.exports.saveItem = async (request, response, user) => {
     return new Promise((resolve, reject) => {
