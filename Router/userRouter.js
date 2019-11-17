@@ -92,7 +92,8 @@ router.get('/api/user/:userId', async (request, response) => {
             response.send(user)
         })
     }
-    response.status(401).send('Unauthorized access')
+    else
+        response.status(401).send('Unauthorized access')
 })
 
 router.get('/users/me', auth, async (req, res) => {
