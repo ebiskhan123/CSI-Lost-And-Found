@@ -9,7 +9,9 @@ router.post('/api/signUp', async (req, res) => {
 
     try {
         await user.save()
-        res.status(201).send()
+        userServices.sendVerificationEmail(user)
+        .then(() => res.status(200).send())
+        .catch(error => res.status(500).send(error))
     } catch (e) {
         if(e.errmsg.includes("duplicate"))
             res.status(400).send({message: "Account already exists"})
@@ -47,7 +49,6 @@ router.post('/api/user/:userId/:resetToken', (request, response) => {
     .catch((error) => response.status(400).send(error))
 })
 
-
 router.post('/api/resetPassword', (request, response) => {
     userServices.getUserByEmail(request.body.email)
     .then(user => {
@@ -61,8 +62,12 @@ router.post('/api/resetPassword', (request, response) => {
 router.post('/api/signIn', async (req, res) => {
     try {
         let user = await User.findByCredentials(req.body.email, req.body.password)
-        let tokens = await user.generateAuthToken()
-        res.send(tokens)
+        if(user.verified) {
+            let tokens = await user.generateAuthToken()
+            res.send(tokens)
+        }
+        else
+            res.status(403).send('Account not verified')
     } catch (e) {
         res.status(400).send(e)
     }
@@ -100,11 +105,30 @@ router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
 })
 
+router.patch('/api/verifyEmail/:userId/:verificationToken', (request, response) => {
+    userServices.getUser(request.params.userId)
+    .then(user => {
+        if(user.emailVerificationToken === request.params.verificationToken)
+            {
+                user.verified = true
+                delete user['emailVerificationToken']
+                user.save((error) => {
+                    if(error)
+                        response.status(500).send(error)
+                    else
+                        response.status(200).send()
+                })
+            }
+        else
+            response.status(400).send('Broken Verification Link')
+    })
+    .catch(error => response.status(400).send('No such user'))
+})
+
 router.get('/api/admin/isLoggedIn', (request, response) => {
     userServices.isAdminLoggedIn(request)
     .then((result) => response.send(result))
     .catch((error) => {
-        console.log(error)
         response.status(500).send(error)
     })
 })

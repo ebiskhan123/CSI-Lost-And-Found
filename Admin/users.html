@@ -1,7 +1,10 @@
 <html>
         <body>
             <style>
-               
+               .message-div
+               {
+                   margin: 2vw
+               }
             </style>
             <a href="../admin">Back</a>
             <div id="loginDiv">
@@ -11,6 +14,11 @@
                 <input type="text" value="" id="userInput" placeholder="id">
                 <button onclick="setUser()">Get</button>
                 <div id="usersDiv"></div>
+                <div class="message-div">
+                    <input type="text" id="subjectInput">
+                    <textarea id="bodyInput" rows="4" cols="50"></textarea>
+                    <button onclick="sendMessage()">Send</button>
+                </div>
             </div>
         <script>
             window.onload = () => {
@@ -26,6 +34,14 @@
                     else
                         showLoginView()
                 })
+            }
+
+            sendMessage = () => {
+                let message = {
+                    subject: document.getElementById('subjectInput').value,
+                    text: document.getElementById('bodyInput').value
+                }
+                postMessage(message)
             }
     
             let showLoginView = () => {
@@ -82,6 +98,19 @@
                     }
                     xhr.send()
                 })
+            }
+
+            const postMessage = (message) => {
+                xhr = new XMLHttpRequest();
+                xhr.open("POST", './api/emailAll', true)
+                xhr.setRequestHeader("content-type", "application/json")
+                xhr.onload = () => {
+                    console.log('done')
+                }
+                xhr.onerror = (error) => {
+                    console.log(error)
+                }
+                xhr.send(JSON.stringify(message))
             }
        </script>
         </body>

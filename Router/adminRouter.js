@@ -24,6 +24,16 @@ module.exports = (app) => {
             sendBlankPage(res)
     })
 
+    app.post('/admin/api/emailAll', async (request, response) => {
+        let loggedIn = await userServices.isAdminLoggedIn(request)
+        if(loggedIn) {
+            userServices.sendBulkEmail(request.body)
+            .then(() => { response.status(200).send() })
+        }
+        else
+            response.status(403).send()
+    })
+
     app.get('/admin/users', async (req, res) => {
         let loggedIn  = await userServices.isAdminLoggedIn(req)
         if(loggedIn) {

@@ -35,6 +35,12 @@ const userSchema = new mongoose.Schema({
     passwordResetToken: {
         type: mongoose.Schema.Types.Mixed
     },
+    emailVerificationToken: {
+        type: String
+    },
+    verified: {
+        type: Boolean
+    },
     tokens: [{
         token: {
             type: String,

@@ -18,12 +18,49 @@ module.exports.getUser = (userId) => {
 
 module.exports.changePassword = (user, password) => {
     user.password = password
+    delete user['passwordResetToken']
     return new Promise((resolve, reject) => {
         user.save((error, data) => {
             if(error)
                 {
                     reject(error)
                 }
+            resolve(data)
+        })
+    })
+}
+
+module.exports.sendBulkEmail = (message) => {
+    return new Promise((reslove, reject) => {
+        getAllUsers().then((users) => {
+            users.forEach(user => {
+                mailer.mailUser(user, message)
+                .then((result) => console.log(result))
+                .catch((error) => console.log(error))
+            })
+            resolve()
+        })
+    })
+}
+
+module.exports.sendVerificationEmail = (user) => {
+    user.emailVerificationToken = generateRandomString(40)
+    return new Promise((resolve, reject) => {
+        user.save((error) => {
+            if(error)
+                reject(error)
+            mailer.sendEmailVerificationLink(user)
+            .then(() => resolve())
+            .catch((error) => reject(error))
+        })
+    })
+}
+
+getAllUsers = () => {
+    return new Promise((resolve, reject) => {
+        User.find({}, (error, data) => {
+            if(error)
+                reject(error)
             resolve(data)
         })
     })
