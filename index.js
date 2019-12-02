@@ -1,7 +1,13 @@
 const express = require('express')
 const Item = require('./Models/item')
 const cookieParser = require('cookie-parser')
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
+const https = require('https')
+const fs = require('fs')
+
+const privateKey  = fs.readFileSync('lostfoundtn.key', 'utf8')
+const certificate = fs.readFileSync('lostfoundtn.com/3a7b495daa069186.crt', 'utf8')
+const credentials = {key: privateKey, cert: certificate}
 
 require('./db/mongoose')
 
@@ -38,8 +44,9 @@ app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
   })
 
-//app.use(foundRouter)
 
-app.listen(port, () => {
+let server = https.createServer(credentials, app)
+
+server.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
