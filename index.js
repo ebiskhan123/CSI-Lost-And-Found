@@ -32,13 +32,9 @@ app.use(express.static(__dirname + '/public'));
 //app.use(express.static(__dirname + '/Views'));
 //app.use(express.static(__dirname + '/Admin'));
 
-app.get('/test', function(req, res) {
-    res.sendFile('views/test.html', {root: __dirname })
-});
-
-
-
-
+app.get('/healthCheck', (request, response) => {
+    response.status(200).send()
+})
 
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
