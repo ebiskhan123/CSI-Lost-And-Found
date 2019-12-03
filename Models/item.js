@@ -1,7 +1,16 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
-const categories = ['Bags','Keys','Documents', 'Wallets', 'Others']
+const categories = ['Bags/Luggages and Wallets',
+ 'Keys',
+ 'Documents and Cards',
+ 'Phone or Tablet', 
+ 'Clothes, Jewels and Wearables',
+ 'Books and Study Materials',
+ 'Vehicle and Accessories', 
+ 'Electronic Items', 
+ 'Sports and Fitness Items', 
+ 'Others']
 
 const ItemSchema = new mongoose.Schema({
   title: {

@@ -29,8 +29,6 @@ app.use(userRouter)
 app.use(locationRouter)
 
 app.use(express.static(__dirname + '/public'));
-//app.use(express.static(__dirname + '/Views'));
-//app.use(express.static(__dirname + '/Admin'));
 
 app.get('/healthCheck', (request, response) => {
     response.status(200).send()
