@@ -44,7 +44,7 @@ module.exports.getItemCategories = () => {
 
 module.exports.getItems = (filters) => {
     return new Promise((resolve, reject) => {
-        Item.find({...filters}).populate({path: 'location', populate:{path: 'city'}})
+        Item.find({...filters}).sort([['date', -1]]).populate({path: 'location', populate:{path: 'city'}})
         .exec((error, data) => {
             if(error) {
                 reject(error)
@@ -116,7 +116,7 @@ module.exports.getAllItems = () => {
 
 module.exports.getMyItems = (user) => {
     return new Promise((resolve, reject) => {
-        Item.find({owner: user._id}).populate({path: 'location', populate:{path: 'city'}})
+        Item.find({owner: user._id}).sort([['date', -1]]).populate({path: 'location', populate:{path: 'city'}})
         .exec((error, data) => {
             if(error) {
                 reject(error)
